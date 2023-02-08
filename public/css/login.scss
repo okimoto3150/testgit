@@ -1,0 +1,323 @@
+@import './mixin';
+
+body{
+    font-family: 'Noto Sans JP';
+    @include sp {
+        .login-content{
+            width: 360px;
+            height: 640px;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .login{
+            margin: 127px 20px 0px 20px;
+
+            &__ttl{
+                text-align: center;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                margin-bottom: 56px;
+                line-height: 160%;
+            }
+        }
+
+        .form{
+            &__block{
+                &--label{
+                    font-size: 16px;
+                }
+                &--mail{
+                    font-size: 16px;
+                    width: 320px;
+                    height: 48px;
+                    border: 1px solid #C1C2CA;
+                    border-radius: 4px;
+                    margin-bottom: 56px;
+                }
+                &--pass{
+                    font-size: 16px;
+                    width: 320px;
+                    height: 48px;
+                    border: 1px solid #C1C2CA;
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        .btn-link{
+            display: block;
+            text-align: right;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 160%;
+            /* または22px */
+            text-decoration-line: underline;
+            /* Text/Black */
+            color: #101319;
+            margin-top: 8px;
+            margin-bottom: 32px;
+        }
+
+        .btng{
+           padding-left: 0;
+
+           &__cont{
+                display: flex;
+                justify-content: center;
+
+               &--primary{
+                margin: 0;
+                background-color: #957AFF;
+                color: #FFFFFF;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                /* ボックスの高さと同一、または24px */
+
+                text-align: center;
+                letter-spacing: 0.05em;
+                font-feature-settings: 'palt';
+                border: solid 1px #957AFF;
+                border-radius: 10px;
+                width: 126px;
+                height: 48px;
+                margin-right: 16px;
+               }
+
+               &--register{
+                background-color: #ffffff;
+                border: solid 1px #957AFF;
+                border-radius: 10px;
+                width: 126px;
+                height: 48px;
+               }
+
+               &--link{
+                color: #957AFF;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                text-align: center;
+                letter-spacing: 0.05em;
+                font-feature-settings: 'palt';
+                text-decoration: none;
+               }
+           }
+        }
+    }
+
+    @include tb {
+        .login-content{
+            width: 440px;
+            height: 880px;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .login{
+            margin: 334px 0px 0px 0px;
+
+            &__ttl{
+                text-align: center;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                margin-bottom: 56px;
+                line-height: 160%;
+            }
+        }
+
+        .form{
+            &__block{
+                &--label{
+                    font-size: 16px;
+                }
+                &--mail{
+                    font-size: 16px;
+                    width: 440px;
+                    height: 48px;
+                    border: 1px solid #C1C2CA;
+                    border-radius: 4px;
+                    margin-bottom: 56px;
+                }
+                &--pass{
+                    font-size: 16px;
+                    width: 440px;
+                    height: 48px;
+                    border: 1px solid #C1C2CA;
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        .btn-link{
+            display: block;
+            text-align: right;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 160%;
+            /* または22px */
+            text-decoration-line: underline;
+            /* Text/Black */
+            color: #101319;
+            margin-top: 8px;
+            margin-bottom: 32px;
+        }
+
+        .btng{
+            &__cont{
+                display: flex;
+                justify-content: center;
+
+                &--primary{
+                margin: 0;
+                background-color: #957AFF;
+                color: #FFFFFF;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                /* ボックスの高さと同一、または24px */
+
+                text-align: center;
+                letter-spacing: 0.05em;
+                font-feature-settings: 'palt';
+                border: solid 1px #957AFF;
+                border-radius: 10px;
+                width: 126px;
+                height: 48px;
+                margin-right: 16px;
+                }
+
+                &--register{
+                background-color: #ffffff;
+                border: solid 1px #957AFF;
+                border-radius: 10px;
+                width: 126px;
+                height: 48px;
+                }
+
+                &--link{
+                color: #957AFF;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                text-align: center;
+                letter-spacing: 0.05em;
+                font-feature-settings: 'palt';
+                text-decoration: none;
+                }
+           }
+        }
+    }
+
+
+    @include pc {
+        .login-content{
+            width: 640px;
+            height: 880px;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .login{
+            margin: 334px 0px 0px 0px;
+
+            &__ttl{
+                text-align: center;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                margin-bottom: 56px;
+                line-height: 160%;
+            }
+        }
+
+        .form{
+            &__block{
+                margin-top: 56px;
+                &--label{
+                    font-size: 16px;
+                }
+                &--mail{
+                    font-size: 16px;
+                    width: 640px;
+                    height: 48px;
+                    border: 1px solid #C1C2CA;
+                    border-radius: 4px;
+                }
+                &--pass{
+                    font-size: 16px;
+                    width: 640px;
+                    height: 48px;
+                    border: 1px solid #C1C2CA;
+                    border-radius: 4px;
+                }
+
+                .invalid-feedback {
+                    color: red;
+                }
+            }
+        }
+
+        .btn-link{
+            display: block;
+            text-align: right;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 160%;
+            /* または22px */
+            text-decoration-line: underline;
+            /* Text/Black */
+            color: #101319;
+            margin-top: 8px;
+            margin-bottom: 32px;
+        }
+
+        .btng{
+            &__cont{
+                display: flex;
+                justify-content: center;
+
+                &--primary{
+                margin: 0;
+                background-color: #957AFF;
+                color: #FFFFFF;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                /* ボックスの高さと同一、または24px */
+
+                text-align: center;
+                letter-spacing: 0.05em;
+                font-feature-settings: 'palt';
+                border: solid 1px #957AFF;
+                border-radius: 10px;
+                width: 126px;
+                height: 48px;
+                margin-right: 16px;
+                }
+
+                &--register{
+                background-color: #ffffff;
+                border: solid 1px #957AFF;
+                border-radius: 10px;
+                width: 126px;
+                height: 48px;
+                }
+
+                &--link{
+                color: #957AFF;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 150%;
+                text-align: center;
+                letter-spacing: 0.05em;
+                font-feature-settings: 'palt';
+                text-decoration: none;
+                }
+           }
+        }
+    }
+}

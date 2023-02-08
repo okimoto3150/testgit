@@ -1,0 +1,273 @@
+@media only screen and (max-width: 600px) {
+  .contractchange {
+    width: 312px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contractchange__ttl {
+    font-size: 28px;
+    font-weight: 600;
+    color: #957AFF;
+  }
+  .contractchange__ttl02 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  .contractchange__text {
+    font-size: 14px;
+    color: #2C2C2C;
+  }
+  .contractchange__btn {
+    display: block;
+    width: 164px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    color: #FFF;
+    cursor: pointer;
+  }
+  .contractchange-form {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .contractchange-form__dl {
+    margin-bottom: 24px;
+    color: #2C2C2C;
+  }
+  .contractchange-form__dt {
+    margin-bottom: 8px;
+    display: flex;
+    width: 312px;
+  }
+  .contractchange-form__dt--label {
+    font-weight: 700;
+  }
+  .contractchange-form__dt .required-box {
+    margin-left: auto;
+    width: 33px;
+    height: 26px;
+    background-color: #71CCC7;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.8;
+    border-radius: 3px;
+    text-align: center;
+  }
+  .contractchange-form__dd--input {
+    width: 312px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  .contractchange-form__dd select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-image: url(../img/Vector.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 13px 8px;
+  }
+  .contractchange-form__dd .yubinbango-mark {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .contractchange-form__dd .yubin-input {
+    width: 292px;
+  }
+  .form-invalid {
+    color: #FF2828;
+    font-size: 14px;
+  }
+  .input-invalid {
+    border: 1px solid #FF2828;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1099px) {
+  .contractchange {
+    width: 70%;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contractchange__ttl {
+    font-size: 28px;
+    font-weight: 600;
+    color: #957AFF;
+  }
+  .contractchange__ttl02 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  .contractchange__text {
+    font-size: 14px;
+    color: #2C2C2C;
+  }
+  .contractchange__btn {
+    display: block;
+    width: 164px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    color: #FFF;
+    cursor: pointer;
+  }
+  .contractchange-form {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .contractchange-form__dl {
+    margin-bottom: 24px;
+    color: #2C2C2C;
+  }
+  .contractchange-form__dt {
+    margin-bottom: 8px;
+    display: flex;
+    width: 500px;
+  }
+  .contractchange-form__dt--label {
+    font-weight: 700;
+  }
+  .contractchange-form__dt .required-box {
+    margin-left: auto;
+    width: 33px;
+    height: 26px;
+    background-color: #71CCC7;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.8;
+    border-radius: 3px;
+    text-align: center;
+  }
+  .contractchange-form__dd--input {
+    width: 500px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  .contractchange-form__dd select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-image: url(../img/Vector.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 13px 8px;
+  }
+  .contractchange-form__dd .yubinbango-mark {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .contractchange-form__dd .yubin-input {
+    width: 480px;
+  }
+  .form-invalid {
+    color: #FF2828;
+    font-size: 14px;
+  }
+  .input-invalid {
+    border: 1px solid #FF2828;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .contractchange {
+    width: 70%;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contractchange__ttl {
+    font-size: 28px;
+    font-weight: 600;
+    color: #957AFF;
+  }
+  .contractchange__ttl02 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  .contractchange__text {
+    font-size: 14px;
+    color: #2C2C2C;
+  }
+  .contractchange__btn {
+    display: block;
+    width: 164px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    color: #FFF;
+    cursor: pointer;
+  }
+  .contractchange-form {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  .contractchange-form__dl {
+    margin-bottom: 24px;
+    color: #2C2C2C;
+  }
+  .contractchange-form__dt {
+    margin-bottom: 8px;
+    display: flex;
+    width: 500px;
+  }
+  .contractchange-form__dt--label {
+    font-weight: 700;
+  }
+  .contractchange-form__dt .required-box {
+    margin-left: auto;
+    width: 33px;
+    height: 26px;
+    background-color: #71CCC7;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.8;
+    border-radius: 3px;
+    text-align: center;
+  }
+  .contractchange-form__dd--input {
+    width: 500px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  .contractchange-form__dd select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-image: url(../img/Vector.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 13px 8px;
+  }
+  .contractchange-form__dd .yubinbango-mark {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .contractchange-form__dd .yubin-input {
+    width: 480px;
+  }
+  .form-invalid {
+    color: #FF2828;
+    font-size: 14px;
+  }
+  .input-invalid {
+    border: 1px solid #FF2828;
+  }
+}/*# sourceMappingURL=contractchange.css.map */

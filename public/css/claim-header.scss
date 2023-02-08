@@ -1,0 +1,330 @@
+@import './mixin';
+
+body{
+    font-family: "Noto Sans JP", Helvetica, sans-serif, "hiraginosans" !important;
+
+    @include sp {
+        .h-wrap{
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 100%;
+            height: 144px;
+            background-color: #fff;
+        }
+        .h{
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+
+            .flex-box {
+                display: flex;
+
+                .logout {
+                    width: 90px;
+                    padding-top: 20px;
+                    margin-left: auto;
+                    margin-right: 20px;
+
+                    a {
+                        text-decoration: none;
+                        color: #957AFF;
+                        font-size: 16px;
+                        font-weight: 700; 
+                    }
+                }
+            }
+    
+            &__logo{
+                padding-top: 20px;
+                margin-left: 20px;
+                width: 143px;
+                height: 72px;
+                
+                img {
+                    width: 100%;
+                }
+            }
+
+            .link-box {
+                display: none;
+            }
+
+            .link-box-sp {
+                display: flex;
+                width: 100%;
+                height: 72px;
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    width: 50%;
+                    font-size: 12px;
+                    text-align: center;
+
+                    &:nth-child(1) {
+                        color: #fff;
+                    }
+
+                    &:nth-child(2) {
+                        color: #957AFF;
+                    }
+                }
+
+                .mypage-link {
+                    width: 100%;
+                    height: 72px;
+                    background-color: #957AFF;
+
+                    .mypage-img {
+                        padding-top: 20px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 16px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .device-link {
+                    width: 100%;
+                    height: 72px;
+                    border: 1px solid #957AFF;
+
+                    .device-img {
+                        padding-top: 20px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: 16px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav {
+            display: none;
+        }
+    
+    }
+
+    @include tb {
+        .h-wrap{
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 100%;
+            height: 72px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(149, 122, 255, 0.1);
+        }
+        .h{
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 78%;
+    
+            &__logo{
+                margin-top: 20px;
+                width: 143px;
+                
+                img {
+                    width: 100%;
+                }
+            }
+
+            .logout {
+                display: none;
+            }
+
+            .link-box {
+                display: flex;
+                margin-left: 5%;
+                width: 290px;
+                height: 72px;
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    font-size: 12px;
+
+                    &:nth-child(1) {
+                        color: #957AFF;
+                    }
+
+                    &:nth-child(2) {
+                        color: #2c2c2c;
+                    }
+                }
+
+                .mypage-link {
+                    width: 120px;
+                    height: 72px;
+                    background-color: #957aff3a;
+                    border-bottom: 5px solid #957aff;
+
+                    .link-inner {
+                        display: flex;
+                        width: 161px;
+                        padding-top: 25px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    
+                    .mypage-img {
+                        width: 18px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                }
+    
+                .device-link {
+                    width: 170px;
+                    height: 72px;
+
+                    .link-inner {
+                        display: flex;
+                        width: 220px;
+                        padding-top: 25px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    .device-img {
+                        width: 18px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .link-box-sp {
+                display: none;
+            }
+        }
+
+        .nav {
+            display: none;
+        }
+    
+    }
+
+
+    @include pc {
+        .h-wrap{
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 100%;
+            height: 72px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(149, 122, 255, 0.1);
+        }
+        .h{
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 78%;
+    
+            &__logo{
+                margin-top: 20px;
+                width: 143px;
+                
+                img {
+                    width: 100%;
+                }
+            }
+
+            .logout {
+                display: none;
+            }
+
+            .link-box {
+                display: flex;
+                margin-left: 120px;
+                width: 437px;
+                height: 72px;
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    font-size: 16px;
+
+                    &:nth-child(1) {
+                        color: #957AFF;
+                    }
+
+                    &:nth-child(2) {
+                        color: #2c2c2c;
+                    }
+                }
+
+                .mypage-link {
+                    width: 186px;
+                    height: 72px;
+                    background-color: #957aff3a;
+                    border-bottom: 5px solid #957aff;
+
+                    .link-inner {
+                        display: flex;
+                        width: 161px;
+                        padding-top: 20px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    
+                    .mypage-img {
+                        width: 24px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                }
+    
+                .device-link {
+                    width: 251px;
+                    height: 72px;
+
+                    .link-inner {
+                        display: flex;
+                        width: 220px;
+                        padding-top: 20px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                    .device-img {
+                        width: 24px;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .link-box-sp {
+                display: none;
+            }
+        }
+
+        .nav {
+            display: none;
+        }
+    
+    }
+
+    
+}

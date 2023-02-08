@@ -1,0 +1,266 @@
+body {
+  font-family: "Noto Sans JP", Helvetica, sans-serif, "hiraginosans" !important;
+}
+@media only screen and (max-width: 600px) {
+  body .h-wrap {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 100%;
+    height: 144px;
+    background-color: #fff;
+  }
+  body .h {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  body .h .flex-box {
+    display: flex;
+  }
+  body .h .flex-box .logout {
+    width: 90px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  body .h .flex-box .logout a {
+    text-decoration: none;
+    color: #957AFF;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  body .h__logo {
+    padding-top: 20px;
+    margin-left: 20px;
+    width: 143px;
+    height: 72px;
+  }
+  body .h__logo img {
+    width: 100%;
+  }
+  body .h .link-box {
+    display: none;
+  }
+  body .h .link-box-sp {
+    display: flex;
+    width: 100%;
+    height: 72px;
+  }
+  body .h .link-box-sp a {
+    display: block;
+    text-decoration: none;
+    width: 50%;
+    font-size: 12px;
+    text-align: center;
+  }
+  body .h .link-box-sp a:nth-child(1) {
+    color: #fff;
+  }
+  body .h .link-box-sp a:nth-child(2) {
+    color: #957AFF;
+  }
+  body .h .link-box-sp .mypage-link {
+    width: 100%;
+    height: 72px;
+    background-color: #957AFF;
+  }
+  body .h .link-box-sp .mypage-link .mypage-img {
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+  }
+  body .h .link-box-sp .mypage-link .mypage-img img {
+    width: 100%;
+  }
+  body .h .link-box-sp .device-link {
+    width: 100%;
+    height: 72px;
+    border: 1px solid #957AFF;
+  }
+  body .h .link-box-sp .device-link .device-img {
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 16px;
+  }
+  body .h .link-box-sp .device-link .device-img img {
+    width: 100%;
+  }
+  body .nav {
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1099px) {
+  body .h-wrap {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 100%;
+    height: 72px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(149, 122, 255, 0.1);
+  }
+  body .h {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 78%;
+  }
+  body .h__logo {
+    margin-top: 20px;
+    width: 143px;
+  }
+  body .h__logo img {
+    width: 100%;
+  }
+  body .h .logout {
+    display: none;
+  }
+  body .h .link-box {
+    display: flex;
+    margin-left: 5%;
+    width: 290px;
+    height: 72px;
+  }
+  body .h .link-box a {
+    display: block;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  body .h .link-box a:nth-child(1) {
+    color: #957AFF;
+  }
+  body .h .link-box a:nth-child(2) {
+    color: #2c2c2c;
+  }
+  body .h .link-box .mypage-link {
+    width: 120px;
+    height: 72px;
+    background-color: rgba(149, 122, 255, 0.2274509804);
+    border-bottom: 5px solid #957aff;
+  }
+  body .h .link-box .mypage-link .link-inner {
+    display: flex;
+    width: 161px;
+    padding-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .h .link-box .mypage-link .mypage-img {
+    width: 18px;
+  }
+  body .h .link-box .mypage-link .mypage-img img {
+    width: 100%;
+  }
+  body .h .link-box .device-link {
+    width: 170px;
+    height: 72px;
+  }
+  body .h .link-box .device-link .link-inner {
+    display: flex;
+    width: 220px;
+    padding-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .h .link-box .device-link .device-img {
+    width: 18px;
+  }
+  body .h .link-box .device-link .device-img img {
+    width: 100%;
+  }
+  body .h .link-box-sp {
+    display: none;
+  }
+  body .nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body .h-wrap {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 100%;
+    height: 72px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(149, 122, 255, 0.1);
+  }
+  body .h {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 78%;
+  }
+  body .h__logo {
+    margin-top: 20px;
+    width: 143px;
+  }
+  body .h__logo img {
+    width: 100%;
+  }
+  body .h .logout {
+    display: none;
+  }
+  body .h .link-box {
+    display: flex;
+    margin-left: 120px;
+    width: 437px;
+    height: 72px;
+  }
+  body .h .link-box a {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  body .h .link-box a:nth-child(1) {
+    color: #957AFF;
+  }
+  body .h .link-box a:nth-child(2) {
+    color: #2c2c2c;
+  }
+  body .h .link-box .mypage-link {
+    width: 186px;
+    height: 72px;
+    background-color: rgba(149, 122, 255, 0.2274509804);
+    border-bottom: 5px solid #957aff;
+  }
+  body .h .link-box .mypage-link .link-inner {
+    display: flex;
+    width: 161px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .h .link-box .mypage-link .mypage-img {
+    width: 24px;
+  }
+  body .h .link-box .mypage-link .mypage-img img {
+    width: 100%;
+  }
+  body .h .link-box .device-link {
+    width: 251px;
+    height: 72px;
+  }
+  body .h .link-box .device-link .link-inner {
+    display: flex;
+    width: 220px;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .h .link-box .device-link .device-img {
+    width: 24px;
+  }
+  body .h .link-box .device-link .device-img img {
+    width: 100%;
+  }
+  body .h .link-box-sp {
+    display: none;
+  }
+  body .nav {
+    display: none;
+  }
+}/*# sourceMappingURL=claim-header.css.map */

@@ -1,0 +1,451 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .m {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .m__name {
+    display: flex;
+    font-size: 14px;
+  }
+  .m__ttl {
+    margin-top: 40px;
+    color: #957AFF;
+    font-size: 28px;
+  }
+  .m__claim--ttl {
+    margin-top: 16px;
+    font-size: 22px;
+  }
+  .m__claim--step {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 312px;
+  }
+  .m__claim--text {
+    margin-top: 32px;
+    font-size: 14px;
+  }
+  .m__contract {
+    margin-top: 32px;
+  }
+  .m__contract--ttl {
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: solid 2px #957AFF;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    color: #2C2C2C;
+  }
+  .m__contract--list {
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  .m__contract--item {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .m__contract--data {
+    margin-left: 0;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .m__contract--check {
+    display: block;
+    margin: auto;
+    gap: 4px;
+    width: 181px;
+    height: 48px;
+    /* White */
+    background: #FFFFFF;
+    /* Primary */
+    border: 1px solid #957AFF;
+    border-radius: 10px;
+  }
+  .m__contract--link {
+    display: block;
+    width: 181px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: #957AFF;
+    text-align: center;
+    line-height: 2.6;
+  }
+  .m__order--ttl {
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: solid 2px #957AFF;
+    color: #2C2C2C;
+  }
+  .m__order .flex-box {
+    margin-bottom: 57px;
+  }
+  .m__order .error {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    color: red;
+    text-align: center;
+  }
+  .m__order--item {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2C2C2C;
+  }
+  .m__order--data {
+    margin-left: 0;
+    font-size: 14px;
+    font-weight: 300;
+    color: #2C2C2C;
+  }
+  .order-btng {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .order-btng__fix {
+    margin-right: 16px;
+    padding: 12px 32px;
+    gap: 4px;
+    width: 130px;
+    height: 48px;
+    cursor: pointer;
+    /* White */
+    background: #FFFFFF;
+    /* Primary */
+    border: 1px solid #957AFF;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: #957AFF;
+  }
+  .order-btng__submit {
+    padding: 12px 32px;
+    gap: 4px;
+    width: 130px;
+    height: 48px;
+    cursor: pointer;
+    /* White */
+    background: #957AFF;
+    /* Primary */
+    border: 1px solid #957AFF;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1099px) {
+  .m {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .m__name {
+    display: flex;
+    font-size: 14px;
+  }
+  .m__ttl {
+    margin-top: 40px;
+    color: #957AFF;
+    font-size: 28px;
+  }
+  .m__claim--ttl {
+    margin-top: 16px;
+    font-size: 22px;
+  }
+  .m__claim--step {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 312px;
+  }
+  .m__claim--text {
+    margin-top: 32px;
+    font-size: 14px;
+  }
+  .m__contract {
+    margin-top: 32px;
+  }
+  .m__contract--ttl {
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: solid 2px #957AFF;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    color: #2C2C2C;
+  }
+  .m__contract--list {
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  .m__contract--item {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .m__contract--data {
+    margin-left: 0;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .m__contract--check {
+    display: block;
+    margin: auto;
+    gap: 4px;
+    width: 181px;
+    height: 48px;
+    /* White */
+    background: #FFFFFF;
+    /* Primary */
+    border: 1px solid #957AFF;
+    border-radius: 10px;
+  }
+  .m__contract--link {
+    display: block;
+    width: 181px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: #957AFF;
+    text-align: center;
+    line-height: 2.6;
+  }
+  .m__order--ttl {
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: solid 2px #957AFF;
+    color: #2C2C2C;
+  }
+  .m__order .flex-box {
+    display: flex;
+    margin-bottom: 57px;
+  }
+  .m__order .order-left {
+    width: 50%;
+  }
+  .m__order .order-right {
+    width: 50%;
+  }
+  .m__order .error {
+    margin-bottom: 8px;
+    color: red;
+    text-align: center;
+  }
+  .m__order--item {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2C2C2C;
+  }
+  .m__order--data {
+    margin-left: 0;
+    font-size: 14px;
+    font-weight: 300;
+    color: #2C2C2C;
+  }
+  .order-btng {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .order-btng__fix {
+    margin-right: 16px;
+    padding: 12px 32px;
+    gap: 4px;
+    width: 130px;
+    height: 48px;
+    cursor: pointer;
+    /* White */
+    background: #FFFFFF;
+    /* Primary */
+    border: 1px solid #957AFF;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: #957AFF;
+  }
+  .order-btng__submit {
+    padding: 12px 32px;
+    gap: 4px;
+    width: 130px;
+    height: 48px;
+    cursor: pointer;
+    /* White */
+    background: #957AFF;
+    /* Primary */
+    border: 1px solid #957AFF;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .m {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .m__name {
+    display: flex;
+    font-size: 14px;
+  }
+  .m__ttl {
+    margin-top: 40px;
+    color: #957AFF;
+    font-size: 28px;
+  }
+  .m__claim--ttl {
+    margin-top: 16px;
+    font-size: 22px;
+  }
+  .m__claim--step {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 312px;
+  }
+  .m__claim--text {
+    margin-top: 32px;
+    font-size: 14px;
+  }
+  .m__contract {
+    margin-top: 32px;
+  }
+  .m__contract--ttl {
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: solid 2px #957AFF;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    color: #2C2C2C;
+  }
+  .m__contract--list {
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  .m__contract--item {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .m__contract--data {
+    margin-left: 0;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .m__contract--check {
+    display: block;
+    margin: auto;
+    gap: 4px;
+    width: 181px;
+    height: 48px;
+    /* White */
+    background: #FFFFFF;
+    /* Primary */
+    border: 1px solid #957AFF;
+    border-radius: 10px;
+  }
+  .m__contract--link {
+    display: block;
+    width: 181px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: #957AFF;
+    text-align: center;
+    line-height: 2.6;
+  }
+  .m__order--ttl {
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: solid 2px #957AFF;
+    color: #2C2C2C;
+  }
+  .m__order .flex-box {
+    display: flex;
+    margin-bottom: 57px;
+  }
+  .m__order .order-left {
+    width: 50%;
+  }
+  .m__order .order-right {
+    width: 50%;
+  }
+  .m__order .error {
+    margin-bottom: 8px;
+    color: red;
+    text-align: center;
+  }
+  .m__order--item {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2C2C2C;
+  }
+  .m__order--data {
+    margin-left: 0;
+    font-size: 14px;
+    font-weight: 300;
+    color: #2C2C2C;
+  }
+  .order-btng {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .order-btng__fix {
+    margin-right: 16px;
+    padding: 12px 32px;
+    gap: 4px;
+    width: 130px;
+    height: 48px;
+    cursor: pointer;
+    /* White */
+    background: #FFFFFF;
+    /* Primary */
+    border: 1px solid #957AFF;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: #957AFF;
+  }
+  .order-btng__submit {
+    padding: 12px 32px;
+    gap: 4px;
+    width: 130px;
+    height: 48px;
+    cursor: pointer;
+    /* White */
+    background: #957AFF;
+    /* Primary */
+    border: 1px solid #957AFF;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+}/*# sourceMappingURL=confirmation.css.map */

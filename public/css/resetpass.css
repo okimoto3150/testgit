@@ -1,0 +1,246 @@
+@media only screen and (max-width: 600px) {
+  .resetmail-contents {
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .resetmail-contents .resetmail-ttl {
+    margin-top: 334px;
+    margin-bottom: 56px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .resetmail-contents .col-form-label {
+    font-size: 16px;
+  }
+  .resetmail-contents .form-control {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #C1C2CA;
+    border-radius: 4px;
+  }
+  .resetmail-contents .btn-primary {
+    display: block;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 48px;
+    margin-top: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: #957AFF;
+    color: #fff;
+  }
+  .resetmail-contents .invalid-feedback {
+    color: red;
+  }
+  .reset-password {
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  .reset-password .reset-ttl {
+    margin-top: 20px;
+    margin-bottom: 26px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #957AFF;
+  }
+  .reset-password .reser-text {
+    font-size: 14px;
+  }
+  .reset-password .mb-3 {
+    margin-top: 30px;
+  }
+  .reset-password .col-form-label {
+    font-size: 16px;
+  }
+  .reset-password .form-control {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #C1C2CA;
+    border-radius: 4px;
+    font-size: 50px;
+  }
+  .reset-password .btn-primary {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
+    height: 48px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #957AFF;
+    color: #fff;
+  }
+  .reset-password .invalid-feedback {
+    color: red;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1099px) {
+  .resetmail-contents {
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .resetmail-contents .resetmail-ttl {
+    margin-top: 334px;
+    margin-bottom: 56px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .resetmail-contents .col-form-label {
+    font-size: 16px;
+  }
+  .resetmail-contents .form-control {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #C1C2CA;
+    border-radius: 4px;
+  }
+  .resetmail-contents .btn-primary {
+    display: block;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 48px;
+    margin-top: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: #957AFF;
+    color: #fff;
+  }
+  .resetmail-contents .invalid-feedback {
+    color: red;
+  }
+  .reset-password {
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  .reset-password .reset-ttl {
+    margin-top: 20px;
+    margin-bottom: 26px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #957AFF;
+  }
+  .reset-password .reser-text {
+    font-size: 14px;
+  }
+  .reset-password .mb-3 {
+    margin-top: 30px;
+  }
+  .reset-password .col-form-label {
+    font-size: 16px;
+  }
+  .reset-password .form-control {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #C1C2CA;
+    border-radius: 4px;
+    font-size: 50px;
+  }
+  .reset-password .btn-primary {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
+    height: 48px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #957AFF;
+    color: #fff;
+  }
+  .reset-password .invalid-feedback {
+    color: red;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .resetmail-contents {
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .resetmail-contents .resetmail-ttl {
+    margin-top: 334px;
+    margin-bottom: 56px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .resetmail-contents .col-form-label {
+    font-size: 16px;
+  }
+  .resetmail-contents .form-control {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #C1C2CA;
+    border-radius: 4px;
+  }
+  .resetmail-contents .btn-primary {
+    display: block;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 48px;
+    margin-top: 56px;
+    border-radius: 10px;
+    border: none;
+    background-color: #957AFF;
+    color: #fff;
+  }
+  .resetmail-contents .invalid-feedback {
+    color: red;
+  }
+  .reset-password {
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  .reset-password .reset-ttl {
+    margin-top: 20px;
+    margin-bottom: 26px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #957AFF;
+  }
+  .reset-password .reser-text {
+    font-size: 14px;
+  }
+  .reset-password .mb-3 {
+    margin-top: 30px;
+  }
+  .reset-password .col-form-label {
+    font-size: 16px;
+  }
+  .reset-password .form-control {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #C1C2CA;
+    border-radius: 4px;
+    font-size: 50px;
+  }
+  .reset-password .btn-primary {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 260px;
+    height: 48px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #957AFF;
+    color: #fff;
+  }
+  .reset-password .invalid-feedback {
+    color: red;
+  }
+}/*# sourceMappingURL=resetpass.css.map */

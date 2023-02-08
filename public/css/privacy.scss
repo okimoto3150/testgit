@@ -1,0 +1,392 @@
+@import './mixin';
+
+body{
+
+        @include sp {
+
+        .privacy{
+            width: 312px;
+            margin: 0 auto;
+            max-width: 100%;
+
+            &__ttl{
+                font-size: 28px;
+                font-weight: 600;
+                margin-top: 24px;
+                color: #957AFF;
+            }
+
+            &__ttl02{
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 16px;
+                margin-bottom: 16px;
+                color: #2C2C2C;
+            }
+
+            &__img{
+                margin-bottom: 16px;
+            }
+
+            &__text{
+                font-size: 14px;
+                color: #2C2C2C;
+            }
+
+            .input-ttl {
+                margin-top: 40px;
+                line-height: 2;
+                font-size: 18px;
+                font-weight: 700;
+                border-bottom: 2px solid #957AFF;
+            }
+
+            &__btn{
+                display: block;
+                width: 164px;
+                height: 48px;
+                background-color: #957AFF;
+                border: none;
+                border-radius: 10px;
+                margin: auto;
+                color: #FFF;
+                cursor: pointer;
+            }
+            
+        }
+
+        .privacy-form{
+            margin-top: 40px;
+            margin-bottom: 50px;
+
+            &__dl{
+                margin-bottom: 24px;
+                color: #2C2C2C;
+            }
+
+            &__dt {
+                display: flex;
+                margin-bottom: 8px;
+
+                &--label {
+                    font-weight: 700;
+                }
+
+                .required-box {
+                    margin-left: auto;
+                    width: 33px;
+                    height: 26px;
+                    background-color: #71CCC7;
+                    font-size: 12px;
+                    color: #fff;
+                    line-height: 1.8;
+                    border-radius: 3px;
+                    text-align: center;
+                }
+
+            }
+            
+            &__dd{
+                &--label{
+                    font-weight: 600;
+                }
+
+                &--input{
+                    width: 312px;
+                    height: 36px;
+                    border: solid 1px #C1C2CA;
+                    border-radius: 4px;
+                }
+
+                select {
+                    appearance: none;
+                    background-image: url(../img/Vector.png);
+                    background-position: right 10px center;
+                    background-repeat: no-repeat;
+                    background-size: 13px 8px;
+                }
+
+                .yubinbango-mark {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+
+                .yubin-input {
+                    width: 292px;
+                }
+            }
+        }
+
+        .form-invalid {
+            color: #FF2828;
+            font-size: 14px;
+        }
+        
+        .input-invalid {
+            border: 1px solid #FF2828;
+        }
+
+    }
+
+    @include tb {
+
+        .privacy{
+            width: 70%;
+            margin: 0 auto;
+            max-width: 100%;
+
+            &__ttl{
+                font-size: 28px;
+                font-weight: 600;
+                margin-top: 24px;
+                color: #957AFF;
+            }
+
+            &__ttl02{
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 16px;
+                margin-bottom: 16px;
+                color: #2C2C2C;
+            }
+
+            &__img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 312px;
+                margin-bottom: 16px;
+            }
+
+            &__text{
+                display: none;
+            }
+
+            .input-ttl {
+                margin-top: 20px;
+                line-height: 2;
+                font-size: 18px;
+                font-weight: 700;
+                border-bottom: 2px solid #957AFF;
+            }
+
+            &__btn{
+                display: block;
+                width: 164px;
+                height: 48px;
+                background-color: #957AFF;
+                border: none;
+                border-radius: 10px;
+                margin: auto;
+                color: #FFF;
+                cursor: pointer;
+            }
+
+            
+        }
+
+        .privacy-form{
+            margin-top: 40px;
+            margin-bottom: 50px;
+            &__dl{
+                margin-bottom: 24px;
+                color: #2C2C2C;
+            }
+            
+            &__dt {
+                margin-bottom: 8px;
+                display: flex;
+                width: 400px;
+
+                &--label {
+                    font-weight: 700;
+                }
+
+                .required-box {
+                    margin-left: auto;
+                    width: 33px;
+                    height: 26px;
+                    background-color: #71CCC7;
+                    font-size: 12px;
+                    color: #fff;
+                    line-height: 1.8;
+                    border-radius: 3px;
+                    text-align: center;
+                }
+
+            }
+
+            &__dd{
+                &--label{
+                    font-weight: 600;
+                }
+
+                &--input{
+                    width: 400px;
+                    height: 36px;
+                    border: solid 1px #C1C2CA;
+                    border-radius: 4px;
+                }
+
+                select {
+                    appearance: none;
+                    background-image: url(../img/Vector.png);
+                    background-position: right 10px center;
+                    background-repeat: no-repeat;
+                    background-size: 13px 8px;
+                }
+
+                .yubinbango-mark {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+
+                .yubin-input {
+                    width: 380px;
+                }
+            }
+        }
+
+        .form-invalid {
+            color: #FF2828;
+            font-size: 14px;
+        }
+        
+        .input-invalid {
+            border: 1px solid #FF2828;
+        }
+
+    }
+
+
+
+    @include pc {
+
+        .privacy{
+            width: 70%;
+            margin: 0 auto;
+            max-width: 100%;
+
+            &__ttl{
+                font-size: 28px;
+                font-weight: 600;
+                margin-top: 24px;
+                color: #957AFF;
+            }
+
+            &__ttl02{
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 16px;
+                margin-bottom: 16px;
+                color: #2C2C2C;
+            }
+
+            &__img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 312px;
+                margin-bottom: 16px;
+            }
+
+            &__text{
+                display: none;
+            }
+
+            .input-ttl {
+                margin-top: 20px;
+                line-height: 2;
+                font-size: 18px;
+                font-weight: 700;
+                border-bottom: 2px solid #957AFF;
+            }
+
+            &__btn{
+                display: block;
+                width: 164px;
+                height: 48px;
+                background-color: #957AFF;
+                border: none;
+                border-radius: 10px;
+                margin: auto;
+                color: #FFF;
+                cursor: pointer;
+            }
+
+            
+        }
+
+        .privacy-form{
+            margin-top: 40px;
+            margin-bottom: 50px;
+            &__dl{
+                margin-bottom: 24px;
+                color: #2C2C2C;
+            }
+            
+            &__dt {
+                margin-bottom: 8px;
+                display: flex;
+                width: 500px;
+
+                &--label {
+                    font-weight: 700;
+                }
+
+                .required-box {
+                    margin-left: auto;
+                    width: 33px;
+                    height: 26px;
+                    background-color: #71CCC7;
+                    font-size: 12px;
+                    color: #fff;
+                    line-height: 1.8;
+                    border-radius: 3px;
+                    text-align: center;
+                }
+
+            }
+
+            &__dd{
+                &--label{
+                    font-weight: 600;
+                }
+
+                &--input{
+                    width: 500px;
+                    height: 36px;
+                    border: solid 1px #C1C2CA;
+                    border-radius: 4px;
+                }
+
+                select {
+                    appearance: none;
+                    background-image: url(../img/Vector.png);
+                    background-position: right 10px center;
+                    background-repeat: no-repeat;
+                    background-size: 13px 8px;
+                }
+
+                .yubinbango-mark {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+
+                .yubin-input {
+                    width: 480px;
+                }
+            }
+        }
+
+        .form-invalid {
+            color: #FF2828;
+            font-size: 14px;
+        }
+        
+        .input-invalid {
+            border: 1px solid #FF2828;
+        }
+
+    }
+}

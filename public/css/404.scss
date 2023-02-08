@@ -1,0 +1,55 @@
+body{
+    font-family: "Noto Sans JP", Helvetica, sans-serif, "hiraginosans" !important;
+
+    .main{
+        background-color: #FFFFFF;
+    }
+
+    .error{
+        text-align: center;
+        margin-top: 96px;
+        padding-bottom:100%;
+        
+        &__ttl{
+            font-size: 40px;
+            font-weight: 300;
+            color: #72767D;
+        }
+
+        .image {
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            height: 200px;
+
+            img {
+                width: 100%;
+            }
+        }
+        
+        &__text{
+            font-size: 14px;
+            font-weight: 300;
+            color: #383D44;
+            width: 312px;
+            display: block;
+            margin: auto;
+        }
+
+        &__btn{
+            width: 172px;
+            height: 48px;
+            border: solid 1px #957AFF;
+            border-radius: 10px;
+            background: #FFFFFF;
+            margin-top: 32px;
+
+            &--link{
+                color: #957AFF;
+                font-size: 16px;
+                font-weight: 600;
+                text-decoration: none;
+            }
+        }
+    }
+}

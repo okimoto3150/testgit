@@ -1,0 +1,505 @@
+@import './mixin';
+
+body{
+
+    @include sp {
+        .checkout{
+            width: 312px;
+            margin: 0 auto;
+            max-width: 100%;
+            margin-bottom: 50px;
+
+            &__ttl{
+                font-size: 28px;
+                font-weight: 600;
+                margin-top: 24px;
+                color: #957AFF;
+            }
+
+            &__ttl02{
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 16px;
+                margin-bottom: 16px;
+                color: #2C2C2C;
+            }
+
+            &__img{
+                margin-bottom: 16px;
+            }
+
+            &__text{
+                font-size: 14px;
+                color: #2C2C2C;
+            }
+
+            &__sec{
+                margin-top: 40px;
+
+                &--ttl{
+                    font-size: 18px;
+                    font-weight: 600;
+                    padding-bottom: 8px;
+                    border-bottom: solid 2px #D9D9D9;
+                    color: #2C2C2C;
+                }
+            }
+        }
+
+        .form-group{
+            margin-top: 24px;
+        }
+
+        .panel-heading{
+            &__ttl{
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: 24px;
+                margin-bottom: 8px;
+                color: #2C2C2C;
+            }
+
+            &__type{
+                font-weight: 400;
+                font-size: 16px;
+                color: #2C2C2C;
+            }
+
+            input[type=radio] {
+                display: none;
+            }
+        
+            label {
+                position: relative;
+                padding-left: 43px;
+            }
+        
+            input[type=radio] + label::before {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 29px;
+                height: 29px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid #000;
+                left: 0;
+                top: 0;
+            }
+        
+            input[type=radio] + label::after {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background: #957AFF;
+                left: 6px;
+                top: 6px;
+                opacity: 0;
+                transition: .3s;
+            }
+        
+            input[type=radio]:checked + label::after {
+                opacity: 1;
+            }
+
+        }
+
+        .card-number{
+            width: 312px;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        
+        }
+
+        .card-cvc{
+            width: 312px;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        }
+
+        .flex{
+            display: flex;
+        }
+
+        .card-expiry-month{
+            width: 80px;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        }
+
+        .card-expiry-year{
+            width: 80px;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        }
+
+        .control-label{
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2C2C2C;
+        }
+
+        .hide{
+            visibility: hidden;
+        }
+
+        .btn-primary{
+            display: block;
+            width: 128px;
+            height: 48px;
+            background-color: #957AFF;
+            border: none;
+            border-radius: 10px;
+            margin: auto;
+            color: #FFF;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+    }
+
+    @include tb {
+        .checkout{
+            width: 70%;
+            margin: 0 auto;
+            max-width: 100%;
+            margin-bottom: 50px;
+
+            &__ttl{
+                font-size: 28px;
+                font-weight: 600;
+                margin-top: 24px;
+                color: #957AFF;
+            }
+
+            &__ttl02{
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 16px;
+                margin-bottom: 16px;
+                color: #2C2C2C;
+            }
+
+            &__img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 312px;
+                margin-bottom: 16px;
+            }
+
+            &__text{
+                font-size: 14px;
+                color: #2C2C2C;
+            }
+
+            &__sec{
+                margin-top: 40px;
+
+                &--ttl{
+                    font-size: 18px;
+                    font-weight: 600;
+                    padding-bottom: 8px;
+                    border-bottom: solid 2px #957AFF;
+                    color: #2C2C2C;
+                }
+            }
+        }
+
+        .form-group{
+            margin-top: 24px;
+        }
+
+        .panel-heading{
+            &__ttl{
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: 24px;
+                margin-bottom: 8px;
+                color: #2C2C2C;
+            }
+
+            &__type{
+                font-weight: 400;
+                font-size: 16px;
+                color: #2C2C2C;
+            }
+
+            input[type=radio] {
+                display: none;
+            }
+        
+            label {
+                position: relative;
+                padding-left: 43px;
+            }
+        
+            input[type=radio] + label::before {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 29px;
+                height: 29px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid #000;
+                left: 0;
+                top: 0;
+            }
+        
+            input[type=radio] + label::after {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background: #957AFF;
+                left: 6px;
+                top: 6px;
+                opacity: 0;
+                transition: .3s;
+            }
+        
+            input[type=radio]:checked + label::after {
+                opacity: 1;
+            }
+        }
+
+        .card-number{
+            width: 60%;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        
+        }
+
+        .card-cvc{
+            width: 60%;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        }
+
+        .flex{
+            display: flex;
+        }
+
+        .card-expiry-month{
+            width: 80px;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        }
+
+        .card-expiry-year{
+            width: 80px;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        }
+
+        .control-label{
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2C2C2C;
+        }
+
+        .hide{
+            visibility: hidden;
+        }
+
+        .btn-primary{
+            display: block;
+            width: 128px;
+            height: 48px;
+            background-color: #957AFF;
+            border: none;
+            border-radius: 10px;
+            margin: auto;
+            color: #FFF;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+    }
+
+
+    
+    @include pc {
+        .checkout{
+            width: 70%;
+            margin: 0 auto;
+            max-width: 100%;
+            margin-bottom: 50px;
+
+            &__ttl{
+                font-size: 28px;
+                font-weight: 600;
+                margin-top: 24px;
+                color: #957AFF;
+            }
+
+            &__ttl02{
+                font-size: 22px;
+                font-weight: 600;
+                margin-top: 16px;
+                margin-bottom: 16px;
+                color: #2C2C2C;
+            }
+
+            &__img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 312px;
+                margin-bottom: 16px;
+            }
+
+            &__text{
+                font-size: 14px;
+                color: #2C2C2C;
+            }
+
+            &__sec{
+                margin-top: 40px;
+
+                &--ttl{
+                    font-size: 18px;
+                    font-weight: 600;
+                    padding-bottom: 8px;
+                    border-bottom: solid 2px #957AFF;
+                    color: #2C2C2C;
+                }
+            }
+        }
+
+        .form-group{
+            margin-top: 24px;
+        }
+
+        .panel-heading{
+            &__ttl{
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: 24px;
+                margin-bottom: 8px;
+                color: #2C2C2C;
+            }
+
+            &__type{
+                font-weight: 400;
+                font-size: 16px;
+                color: #2C2C2C;
+            }
+
+            input[type=radio] {
+                display: none;
+            }
+        
+            label {
+                position: relative;
+                padding-left: 43px;
+            }
+        
+            input[type=radio] + label::before {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 29px;
+                height: 29px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid #000;
+                left: 0;
+                top: 0;
+            }
+        
+            input[type=radio] + label::after {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background: #957AFF;
+                left: 6px;
+                top: 6px;
+                opacity: 0;
+                transition: .3s;
+            }
+        
+            input[type=radio]:checked + label::after {
+                opacity: 1;
+            }
+        }
+
+        .card-number{
+            width: 50%;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        
+        }
+
+        .card-cvc{
+            width: 50%;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        }
+
+        .flex{
+            display: flex;
+        }
+
+        .card-expiry-month{
+            width: 80px;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        }
+
+        .card-expiry-year{
+            width: 80px;
+            height: 36px;
+            border: solid 1px #C1C2CA;
+            border-radius: 4px;
+        }
+
+        .control-label{
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2C2C2C;
+        }
+
+        .hide{
+            visibility: hidden;
+        }
+
+        .btn-primary{
+            display: block;
+            width: 128px;
+            height: 48px;
+            background-color: #957AFF;
+            border: none;
+            border-radius: 10px;
+            margin: auto;
+            color: #FFF;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+    }
+
+}

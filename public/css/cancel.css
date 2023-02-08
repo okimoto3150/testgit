@@ -1,0 +1,177 @@
+@media only screen and (max-width: 600px) {
+  .m-wrap {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  .m-wrap .name {
+    font-size: 14px;
+    color: #2C2C2C;
+  }
+  .m-wrap h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    color: #957AFF;
+  }
+  .m-wrap .cancel-text {
+    margin-top: 24px;
+  }
+  .m-wrap .cancel-text p {
+    line-height: 1.9;
+    font-size: 14px;
+    color: #2C2C2C;
+  }
+  .m-wrap .cancel-text p span {
+    color: #FF2828;
+  }
+  .m-wrap .cancel-btn-box {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    width: 224px;
+  }
+  .m-wrap .cancel-btn-box .cancel-btn {
+    width: 224px;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #957AFF;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  .m-wrap .cancel-btn-box .cancel-btn a {
+    color: #957AFF;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .m-wrap .cancel-btn-box .return-btn {
+    margin-top: 30px;
+    width: 224px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #957AFF;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1099px) {
+  .m-wrap {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  .m-wrap .name {
+    font-size: 14px;
+    color: #2C2C2C;
+  }
+  .m-wrap h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    color: #957AFF;
+  }
+  .m-wrap .cancel-text {
+    margin-top: 24px;
+  }
+  .m-wrap .cancel-text p {
+    font-size: 14px;
+    color: #2C2C2C;
+    line-height: 1.9;
+  }
+  .m-wrap .cancel-text p span {
+    color: #FF2828;
+  }
+  .m-wrap .cancel-btn-box {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    width: 435px;
+  }
+  .m-wrap .cancel-btn-box .cancel-btn {
+    width: 192px;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #957AFF;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  .m-wrap .cancel-btn-box .cancel-btn a {
+    color: #957AFF;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .m-wrap .cancel-btn-box .return-btn {
+    margin-left: 15px;
+    width: 224px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #957AFF;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .m-wrap {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  .m-wrap .name {
+    font-size: 14px;
+    color: #2C2C2C;
+  }
+  .m-wrap h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    color: #957AFF;
+  }
+  .m-wrap .cancel-text {
+    margin-top: 24px;
+  }
+  .m-wrap .cancel-text p {
+    font-size: 14px;
+    color: #2C2C2C;
+    line-height: 1.9;
+  }
+  .m-wrap .cancel-text p span {
+    color: #FF2828;
+  }
+  .m-wrap .cancel-btn-box {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    width: 435px;
+  }
+  .m-wrap .cancel-btn-box .cancel-btn {
+    width: 192px;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid #957AFF;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  .m-wrap .cancel-btn-box .cancel-btn a {
+    color: #957AFF;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .m-wrap .cancel-btn-box .return-btn {
+    margin-left: 15px;
+    width: 224px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: #957AFF;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=cancel.css.map */

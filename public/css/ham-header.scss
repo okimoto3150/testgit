@@ -1,0 +1,185 @@
+@import './mixin';
+
+body{
+    font-family: "Noto Sans JP", Helvetica, sans-serif, "hiraginosans" !important;
+
+    @include sp {
+        .h-wrap{
+            position: fixed;
+            top: 0;
+            z-index: 10000;
+            width: 100%;
+            max-width: 100%;
+            height: 72px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(149, 122, 255, 0.1);
+        }
+        .h{
+            width: 100%;
+            display: flex;
+    
+            &__logo{
+                margin-top: 20px;
+                margin-left: 40px;
+                width: 143px;
+                
+                img {
+                    width: 100%;
+                }
+            }
+        
+    
+    
+                &__ham{
+                    position: relative;//ボタン内側の基点となるためrelativeを指定
+                    top: 10px;
+                    margin-right: 40px;
+                    margin-left: auto;
+                    cursor: pointer;
+                    width: 50px;
+                    height:50px;
+            
+                    &--line{
+                        display: inline-block;
+                        transition: all .4s;
+                        position: absolute;
+                        left: 14px;
+                        height: 3px;
+                        border-radius: 2px;
+                        background: #957AFF;
+                        width: 45%;
+            
+                        &:nth-of-type(1) {
+                            top:15px; 
+                        }
+            
+                        &:nth-of-type(2) {
+                            top:23px;
+                        }
+            
+                        &:nth-of-type(3) {
+                            top:31px;
+                        }
+                    }
+                }
+    
+                &__ham.active .h__ham--line:nth-of-type(1) {
+                    top:18px; 
+                    left: 18px;
+                    transform: translateY(6px) rotate(-45deg);
+                    width: 30px; 
+                }
+    
+                &__ham.active .h__ham--line:nth-of-type(2) {
+                    opacity: 0;
+                }
+    
+                &__ham.active .h__ham--line:nth-of-type(3) {
+                    top:30px;
+                    left: 18px;
+                    transform: translateY(-6px) rotate(45deg);
+                    width: 30px;
+                    
+                }
+            }
+            
+            .nav{
+                width: 100%;
+                height: 100vh;
+                padding-top: 90px;
+                background-color: #957AFF;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+                transform: translateX(100%);
+                transition: all 0.6s;
+    
+                &__list{
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 90%;
+
+                    &--item{
+                        list-style: none;
+                        margin-bottom: 24px;
+                    }
+    
+                    &--link{
+                        text-decoration: none;
+                        color: #fff;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .nav.active{
+                transform: translateX(0%);
+            }
+    
+    }
+
+    @include tb {
+        .h-wrap{
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 100%;
+            height: 72px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(149, 122, 255, 0.1);
+        }
+        .h{
+            width: 100%;
+            display: flex;
+    
+            &__logo{
+                margin-top: 20px;
+                margin-left: 40px;
+                width: 143px;
+                
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .nav {
+            display: none;
+        }
+    
+    }
+
+
+    @include pc {
+        .h-wrap{
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 100%;
+            height: 72px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(149, 122, 255, 0.1);
+        }
+        .h{
+            width: 100%;
+            display: flex;
+    
+            &__logo{
+                margin-top: 20px;
+                margin-left: 40px;
+                width: 143px;
+                
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .nav {
+            display: none;
+        }
+    
+    }
+
+    
+}

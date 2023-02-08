@@ -1,0 +1,592 @@
+@charset "UTF-8";
+@media only screen and (max-width: 600px) {
+  body .notes {
+    width: 312px;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  body .notes__cont--ttl {
+    margin-top: 24px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #957AFF;
+  }
+  body .notes__cont--text {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #2C2C2C;
+  }
+  body .notes__cont--label {
+    position: relative;
+    bottom: 10px;
+  }
+  body .notes__cont--check {
+    width: 24px;
+    height: 24px;
+  }
+  body .notes__cont--link {
+    margin-top: 16px;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #0086E8;
+  }
+  body .notes__sec {
+    margin-top: 40px;
+    color: #2C2C2C;
+  }
+  body .notes__sec--ttl {
+    font-size: 22px;
+    color: #2C2C2C;
+  }
+  body .notes__sec--item {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 312px;
+    height: 140px;
+    border: 1px solid #000;
+    overflow-y: scroll;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 8px;
+    border: solid 1px #C1C2CA;
+    background-color: #FFF;
+    line-height: 25.2px;
+  }
+  body .notes__block {
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+  body .notes__block--ttl {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  body .notes__block--flex {
+    display: flex;
+  }
+  body .notes__block--check {
+    width: 28px;
+    height: 28px;
+    margin-top: 33px;
+    margin-right: 5px;
+    border: solid 2px #C1C2CA;
+    border-radius: 3px;
+  }
+  body .notes__block--label {
+    display: block;
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  body .notes__btn {
+    display: block;
+    width: 97px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+  }
+  body .notes__btn--link {
+    display: block;
+    width: 86px;
+    line-height: 2.6;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  body .notes__btn[disabled] {
+    background-color: #ccc;
+    cursor: default;
+  }
+  body .checkbox01 {
+    display: none;
+  }
+  body .checkbox01 + .checkbox01-label {
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 10px;
+  }
+  body .checkbox01 + .checkbox01-label::before {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    border: 1px solid;
+    border-color: #C1C2CA; /* 枠の色変更 お好きな色を */
+    border-radius: 3px;
+    background-color: #FFF; /* 背景の色変更 お好きな色を */
+  }
+  body .checkbox01:checked + .checkbox01-label::after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -6px;
+    top: 50%;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color: #585753; /* チェックの色変更 お好きな色を */
+  }
+  body .checkbox01-text {
+    position: relative;
+    top: 7px;
+  }
+  body .checkbox02 {
+    display: none;
+  }
+  body .checkbox02 + .checkbox02-label {
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 10px;
+  }
+  body .checkbox02 + .checkbox02-label::before {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    border: 1px solid;
+    border-color: #C1C2CA; /* 枠の色変更 お好きな色を */
+    border-radius: 3px;
+    background-color: #FFF; /* 背景の色変更 お好きな色を */
+  }
+  body .checkbox02:checked + .checkbox02-label::after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -6px;
+    top: 50%;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color: #2C2C2C; /* チェックの色変更 お好きな色を */
+  }
+  body .checkbox02-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1099px) {
+  body .notes {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  body .notes__cont--ttl {
+    margin-top: 24px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #957AFF;
+  }
+  body .notes__cont--text {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #2C2C2C;
+  }
+  body .notes__cont--label {
+    position: relative;
+    bottom: 10px;
+  }
+  body .notes__cont--check {
+    width: 24px;
+    height: 24px;
+  }
+  body .notes__cont--link {
+    margin-top: 16px;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #0086E8;
+  }
+  body .notes__sec {
+    margin-top: 40px;
+    color: #2C2C2C;
+  }
+  body .notes__sec--ttl {
+    font-size: 22px;
+    color: #2C2C2C;
+  }
+  body .notes__sec--item {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 140px;
+    border: 1px solid #000;
+    overflow-y: scroll;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 8px;
+    border: solid 1px #C1C2CA;
+    background-color: #FFF;
+    line-height: 25.2px;
+  }
+  body .notes__block {
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+  body .notes__block--ttl {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  body .notes__block--flex {
+    display: flex;
+  }
+  body .notes__block--check {
+    width: 28px;
+    height: 28px;
+    margin-top: 33px;
+    margin-right: 5px;
+    border: solid 2px #C1C2CA;
+    border-radius: 3px;
+  }
+  body .notes__block--label {
+    display: block;
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  body .notes__btn {
+    display: block;
+    width: 97px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+  }
+  body .notes__btn--link {
+    display: block;
+    color: #FFF;
+    width: 86px;
+    line-height: 2.6;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  body .notes__btn[disabled] {
+    background-color: #ccc;
+    cursor: default;
+  }
+  body .checkbox01 {
+    display: none;
+  }
+  body .checkbox01 + .checkbox01-label {
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 10px;
+  }
+  body .checkbox01 + .checkbox01-label::before {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    border: 1px solid;
+    border-color: #C1C2CA; /* 枠の色変更 お好きな色を */
+    border-radius: 3px;
+    background-color: #FFF; /* 背景の色変更 お好きな色を */
+  }
+  body .checkbox01:checked + .checkbox01-label::after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -6px;
+    top: 50%;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color: #585753; /* チェックの色変更 お好きな色を */
+  }
+  body .checkbox01-text {
+    position: relative;
+    top: 7px;
+  }
+  body .checkbox02 {
+    display: none;
+  }
+  body .checkbox02 + .checkbox02-label {
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 10px;
+  }
+  body .checkbox02 + .checkbox02-label::before {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    border: 1px solid;
+    border-color: #C1C2CA; /* 枠の色変更 お好きな色を */
+    border-radius: 3px;
+    background-color: #FFF; /* 背景の色変更 お好きな色を */
+  }
+  body .checkbox02:checked + .checkbox02-label::after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -6px;
+    top: 50%;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color: #2C2C2C; /* チェックの色変更 お好きな色を */
+  }
+  body .checkbox02-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body .notes {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  body .notes__cont--ttl {
+    margin-top: 24px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #957AFF;
+  }
+  body .notes__cont--text {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #2C2C2C;
+  }
+  body .notes__cont--label {
+    position: relative;
+    bottom: 10px;
+  }
+  body .notes__cont--check {
+    width: 24px;
+    height: 24px;
+  }
+  body .notes__cont--link {
+    margin-top: 16px;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #0086E8;
+  }
+  body .notes__sec {
+    margin-top: 40px;
+    color: #2C2C2C;
+  }
+  body .notes__sec--ttl {
+    font-size: 22px;
+    color: #2C2C2C;
+  }
+  body .notes__sec--item {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 140px;
+    border: 1px solid #000;
+    overflow-y: scroll;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 8px;
+    border: solid 1px #C1C2CA;
+    background-color: #FFF;
+    line-height: 25.2px;
+  }
+  body .notes__block {
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+  body .notes__block--ttl {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  body .notes__block--flex {
+    display: flex;
+  }
+  body .notes__block--check {
+    width: 28px;
+    height: 28px;
+    margin-top: 33px;
+    margin-right: 5px;
+    border: solid 2px #C1C2CA;
+    border-radius: 3px;
+  }
+  body .notes__block--label {
+    display: block;
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  body .notes__btn {
+    display: block;
+    width: 97px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+  }
+  body .notes__btn--link {
+    display: block;
+    width: 86px;
+    line-height: 2.8;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  body .notes__btn[disabled] {
+    background-color: #ccc;
+    cursor: default;
+  }
+  body .checkbox01 {
+    display: none;
+  }
+  body .checkbox01 + .checkbox01-label {
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 10px;
+  }
+  body .checkbox01 + .checkbox01-label::before {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    border: 1px solid;
+    border-color: #C1C2CA; /* 枠の色変更 お好きな色を */
+    border-radius: 3px;
+    background-color: #FFF; /* 背景の色変更 お好きな色を */
+  }
+  body .checkbox01:checked + .checkbox01-label::after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -6px;
+    top: 50%;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color: #585753; /* チェックの色変更 お好きな色を */
+  }
+  body .checkbox01-text {
+    position: relative;
+    top: 7px;
+  }
+  body .checkbox02 {
+    display: none;
+  }
+  body .checkbox02 + .checkbox02-label {
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 10px;
+  }
+  body .checkbox02 + .checkbox02-label::before {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    border: 1px solid;
+    border-color: #C1C2CA; /* 枠の色変更 お好きな色を */
+    border-radius: 3px;
+    background-color: #FFF; /* 背景の色変更 お好きな色を */
+  }
+  body .checkbox02:checked + .checkbox02-label::after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -6px;
+    top: 50%;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color: #2C2C2C; /* チェックの色変更 お好きな色を */
+  }
+  body .checkbox02-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+  }
+}/*# sourceMappingURL=notes.css.map */

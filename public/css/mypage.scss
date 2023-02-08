@@ -1,0 +1,1773 @@
+@import './mixin';
+
+@include sp {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        font-family: "Noto Sans JP", Helvetica, sans-serif, "hiraginosans" !important;
+        margin: 0;
+
+        .mypage-left {
+            display: none;
+        }
+                
+        .mypage-top {
+            width: 100%;
+            height: 72px;
+        }
+    
+        .m-wrap{
+            width: 360px;
+            margin:  0 auto;
+            max-width: 100%;
+        }
+    
+        .home-m{
+            margin: 24px 20px 95px 20px;
+    
+            &__name{
+                font-size: 14px;
+                margin-bottom: 40px;
+                color: #2C2C2C;
+            }
+    
+            &__ttl{
+                font-size: 28px;
+                margin-bottom: 16px;
+                color: #2C2C2C;
+            }
+    
+            &__text{
+                font-size: 14px;
+                line-height: 180%;
+                margin-bottom: 40px;
+                color: #2C2C2C;
+            }
+    
+            &__device-entry{
+                width: 312px;
+                height: 187px;
+                background: #FFEFEF;
+                margin-bottom: 40px;
+    
+                &--text{
+                    padding: 24px 24px 16px 24px;
+                    color: #2C2C2C;
+                }
+    
+                &--btn{
+                    display: block;
+                    margin: auto;
+                    width: 223px;
+                    height: 48px;
+                    background: #FFFFFF;
+                    border: 1px solid #957AFF;
+                    color: #957AFF;
+                    font-weight: 700;
+                    border-radius: 24px;
+                }
+            }
+        }
+    
+        .Contractor{
+            &__ttl{
+                font-size: 18px;
+                border-bottom: solid 2px #D9D9D9;
+                width: 312px;
+                padding-bottom: 8px;
+                color: #2C2C2C;
+            }
+    
+            &__list{
+                margin-top: 24px;
+    
+                &--ttl{
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    color: #2C2C2C;
+                    margin-bottom: 8px;
+                }
+    
+                &--data{
+                    margin-left: 0;
+                    margin-bottom: 24px;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 25.2px;
+                    color: #2C2C2C;
+                }
+            }
+        }
+    
+        .change-btng{
+            text-align: center;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin-bottom: 40px;
+            &__user{
+                margin-bottom: 16px;
+                width: 213px;
+                height: 48px;
+                background: #957AFF;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 207px;
+                    line-height: 2.6;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }
+            }
+    
+            &__payment{
+                width: 213px;
+                height: 48px;
+                background: #ffffff;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 207px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 2.6;
+                    color: #957AFF;
+                    text-decoration: none;
+                }
+            }
+        }
+    
+        
+        .contract{
+            &__ttl{
+                font-size: 18px;
+                border-bottom: solid 2px #D9D9D9;
+                width: 312px;
+                padding-bottom: 8px;
+                margin-bottom: 24px;
+                color: #2C2C2C;
+            }
+        }
+    
+        .contract-cont{
+            margin-top: 5%;
+            width: 312px;
+            border: solid 1px #D9D9D9;
+            border-radius: 8px;
+    
+            &__ttl{
+                position: relative;
+                color: #2C2C2C;
+            }
+    
+            &__data{
+                display: none;
+                margin-left: 0;
+                color: #2C2C2C;
+            }
+        }
+    
+        .subject{
+            display: flex;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+
+            .device-icon-box {
+                margin-top: 7px;
+                margin-left: 10px;
+                width: 40px;
+
+                img {
+                    width: 100%;
+                }
+            }
+    
+            &__ttl{
+                margin-left: 10px;
+
+                &--device{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 27px;
+                    margin: 0;
+                }
+                &--name{
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 25.2px;
+                    margin: 0;
+                }
+            }
+    
+            &__empty{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+            }
+    
+            &__judging{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+                font-size: 12px;
+                background: #E3F5F4;
+                color: #4E9591;
+                margin-top: 10px;
+                line-height: 240%;
+                text-align: center;
+            }
+
+            &__done{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+                font-size: 12px;
+                background: #EAE4FF;
+                color: #957AFF;
+                margin-top: 10px;
+                line-height: 240%;
+                text-align: center;
+            }
+
+            &__impossible{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+                font-size: 12px;
+                background: #FFEFEF;
+                color: #FF2828;
+                margin-top: 10px;
+                line-height: 240%;
+                text-align: center;
+            }
+
+    
+            &__btn{
+                &--line{
+                    position: relative;
+                    top: 50%;
+                    margin-right: 0;
+                    transform: translateY(-50%);
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    text-indent: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+    
+                    &:before,&:after{
+                        display: block;
+                        content: '';
+                        background-color: #000;
+                        position: absolute;
+                        width: 13px;
+                        height: 2px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    
+    
+        .subject__btn--line:before {
+            width: 2px;
+            height: 13px;
+        }
+    
+        .contract-cont__ttl.selected .subject__btn--line:before {
+            content: normal;
+        }
+
+        .data-line {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 24px;
+            width: 90%;
+            height: 2px;
+            background-color: #C1C2CA;
+        }
+
+    
+        .contract-info{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+    
+            &__item{
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 16px;
+            }
+    
+            &__value{
+                font-size: 14px;
+                margin-bottom: 16px;
+            }
+        }
+
+        .agreement-info {
+            width: 90%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .agreement-ttl {
+                line-height: 2;
+                padding-left: 5px;
+                font-size: 16px;
+                margin-bottom: 16px;
+                background-color: #C1C2CA;
+            }
+
+            &__item{
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 16px;
+            }
+    
+            &__value{
+                font-size: 14px;
+                margin-bottom: 16px;
+            }
+
+            .state {
+                font-size: 14px;
+                margin-top: -16px;
+            }
+        }
+
+        .client-info {
+            width: 90%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .client-ttl {
+                line-height: 2;
+                padding-left: 5px;
+                font-size: 16px;
+                margin-bottom: 16px;
+                background-color: #C1C2CA;
+            }
+
+            &__item{
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 16px;
+            }
+    
+            &__value{
+                font-size: 14px;
+                margin-bottom: 16px;
+            }
+
+        }
+    
+        .link-btng{
+            width: 213px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+
+            &__claim{
+                margin-bottom: 16px;
+                width: 213px;
+                height: 48px;
+                background: #957AFF;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 213px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 2.6;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }
+            }
+    
+            &__terms{
+                width: 213px;
+                height: 48px;
+                background: #ffffff;
+                margin-bottom: 40px;
+                margin-bottom: 16px;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 213px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 2.6;
+                    color: #957AFF;
+                    text-decoration: none;
+                }
+            }
+
+            &__delete{
+                text-align: center;
+                width: 213px;
+                height: 48px;
+                background: #fff;
+                border-radius: 10px;
+                border: 1px solid #957AFF;
+                cursor: pointer;
+
+                .md-btn {
+                    display: block;
+                    line-height: 2.6;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #957AFF;
+                    text-decoration: none;
+                    
+                }
+            }
+
+            .modal-body {
+                position: fixed;
+                top: 20%;
+                left: 5%;
+                z-index: 10000;
+                padding-bottom: 20px;
+                display: none;
+                width: 90%;
+                background-color: #fff;
+                border-radius: 10px;
+
+                .modal-p {
+                    width: 90%;
+                    margin-top: 60px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 80px;
+
+                    P {
+                        &:nth-child(1) {
+                            font-size: 28px;
+                            color: #957AFF;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .modal-btn {
+                    width: 128px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    .modal-delete {
+                        margin-bottom: 16px;
+                        width: 128px;
+                        height: 48px;
+                        border-radius: 10px;
+                        background-color: #957AFF;
+                        border: none;
+                        cursor: pointer;
+
+                        a {
+                            color: #fff;
+                            font-weight: 600;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .md-close {
+                        width: 128px;
+                        height: 48px;
+                        border-radius: 10px;
+                        background-color: #fff;
+                        border: 1px solid #957AFF;
+                        color: #957AFF;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .md-overlay{
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: .7;
+                z-index: 9999;
+            }
+
+        }
+
+        &.fixed {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+        }
+        
+    
+        .contract-plas{
+            margin: 24px 0px 94px 0px;
+            &__btn{
+                display: block;
+                margin: 0 auto;
+                width: 213px;
+                height: 48px;
+                background: #ffffff;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 207px;
+                    line-height: 2.6;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #957AFF;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@include tb {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        font-family: "Noto Sans JP", Helvetica, sans-serif, "hiraginosans" !important;
+        margin: 0;
+        padding: 0;
+
+    
+        .m-contener {
+            display: flex;
+        }
+        
+        .mypage-left {
+            position: relative;
+            width: 20%;
+            min-height: 100%;
+            background-color: #957AFF;
+
+            ul {
+                margin-left: auto;
+                margin-right: auto;
+                width: 86%;
+                list-style-type: none;
+
+                li {
+                    margin-top: 25px;
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 1vw;
+                    }
+                }
+            }
+        }
+
+
+        .m-wrap{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+        }
+    
+        .home-m{
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+
+            &__name{
+                margin-top: 30px;
+                font-size: 14px;
+                margin-bottom: 40px;
+                color: #2C2C2C;
+            }
+    
+            &__ttl{
+                font-size: 28px;
+                margin-bottom: 16px;
+                color: #2C2C2C;
+            }
+    
+            &__text{
+                font-size: 14px;
+                line-height: 180%;
+                margin-bottom: 40px;
+                color: #2C2C2C;
+            }
+    
+            &__device-entry{
+                margin-left: auto;
+                margin-right: auto;
+                width: 60%;
+                height: 187px;
+                background: #FFEFEF;
+                margin-bottom: 40px;
+    
+                &--text{
+                    padding: 24px 24px 16px 24px;
+                    color: #2C2C2C;
+                }
+    
+                &--btn{
+                    display: block;
+                    margin: auto;
+                    width: 223px;
+                    height: 48px;
+                    background: #FFFFFF;
+                    border: 1px solid #957AFF;
+                    color: #957AFF;
+                    font-weight: 700;
+                    border-radius: 24px;
+                }
+            }
+        }
+    
+        .Contractor{
+            &__ttl{
+                font-size: 18px;
+                border-bottom: solid 2px #D9D9D9;
+                width: 100%;
+                padding-bottom: 8px;
+                color: #2C2C2C;
+            }
+    
+            &__list{
+                display: flex;
+                width: 100%;
+                margin-top: 24px;
+
+                .Contractor__left {
+                    width: 50%;
+                }
+
+                .Contractor__right {
+                    width: 50%;
+                }
+    
+                &--ttl{
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    color: #2C2C2C;
+                    margin-bottom: 8px;
+                }
+    
+                &--data{
+                    margin-left: 0;
+                    margin-bottom: 24px;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 25.2px;
+                    color: #2C2C2C;
+                }
+            }
+        }
+    
+        .change-btng{
+            text-align: center;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin-bottom: 40px;
+            &__user{
+                margin-bottom: 16px;
+                width: 213px;
+                height: 48px;
+                background: #957AFF;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 207px;
+                    line-height: 2.6;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }
+            }
+    
+            &__payment{
+                width: 213px;
+                margin-left: 15px;
+                height: 48px;
+                background: #ffffff;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 207px;
+                    line-height: 2.6;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #957AFF;
+                    text-decoration: none;
+                }
+            }
+        }
+    
+        
+        .contract{
+            &__ttl{
+                font-size: 18px;
+                border-bottom: solid 2px #D9D9D9;
+                width: 100%;
+                padding-bottom: 8px;
+                margin-bottom: 24px;
+                color: #2C2C2C;
+            }
+        }
+    
+        .contract-cont{
+            margin-top: 2%;
+            width: 100%;
+            border: solid 1px #D9D9D9;
+            border-radius: 8px;
+    
+            &__ttl{
+                color: #2C2C2C;
+            }
+    
+            &__data{
+                display: none;
+                margin-left: 0;
+                color: #2C2C2C;
+
+                .data-flex {
+                    display: flex;
+                    width: 95%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 56px;
+                }
+            }
+        }
+    
+        .subject{
+            display: flex;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+
+            .device-icon-box {
+                margin-left: 10px;
+                width: 40px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &__ttl{
+                margin-left: 10px;
+
+                &--device{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 27px;
+                    margin: 0;
+                }
+                &--name{
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 25.2px;
+                    margin: 0;
+                }
+            }
+    
+            &__empty{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+            }
+    
+            &__judging{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+                font-size: 12px;
+                background: #E3F5F4;
+                color: #4E9591;
+                margin-top: 10px;
+                line-height: 240%;
+                text-align: center;
+            }
+
+            &__done{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+                font-size: 12px;
+                background: #EAE4FF;
+                color: #957AFF;
+                margin-top: 10px;
+                line-height: 240%;
+                text-align: center;
+            }
+
+            &__impossible{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+                font-size: 12px;
+                background: #FFEFEF;
+                color: #FF2828;
+                margin-top: 10px;
+                line-height: 240%;
+                text-align: center;
+            }
+
+    
+            &__btn{
+                &--line{
+                    position: relative;
+                    top: 50%;
+                    margin-right: 10px;
+                    transform: translateY(-50%);
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    text-indent: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+    
+                    &:before,&:after{
+                        display: block;
+                        content: '';
+                        background-color: #000;
+                        position: absolute;
+                        width: 13px;
+                        height: 2px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    
+    
+        .subject__btn--line:before {
+            width: 2px;
+            height: 13px;
+        }
+    
+        .contract-cont__ttl.selected .subject__btn--line:before {
+            content: normal;
+        }
+    
+        .data-line {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 24px;
+            width: 98%;
+            height: 2px;
+            background-color: #C1C2CA;
+        }
+
+        .contract-info{
+            width: 30%;
+            text-align: left;
+    
+            &__item{
+                font-size: 1.5vw;
+                font-weight: 600;
+                margin-bottom: 16px;
+                margin-left: 20px;
+            }
+    
+            &__value{
+                font-size: 1.3vw;
+                margin-left: 20px;
+                margin-bottom: 16px;
+            }
+        }
+
+        .agreement-info {
+            width: 35%;
+            margin-left: 3%;
+
+            .agreement-ttl {
+                line-height: 2;
+                padding-left: 5px;
+                font-size: 1.5vw;
+                margin-bottom: 16px;
+                background-color: #C1C2CA;
+            }
+
+            &__item{
+                font-size: 1.5vw;
+                font-weight: 600;
+                margin-bottom: 16px;
+                margin-left: 16px;
+            }
+    
+            &__value{
+                font-size: 1.3vw;
+                margin-left: 16px;
+                margin-bottom: 16px;
+            }
+
+             .state {
+                margin-left: 16px;
+                margin-top: -16px;
+                font-size: 1.3vw;
+            }
+        }
+
+        .client-info {
+            width: 29%;
+            margin-left: 3%;
+
+            .client-ttl {
+                line-height: 2;
+                font-size: 1.5vw;
+                padding-left: 5px;
+                margin-bottom: 16px;
+                background-color: #C1C2CA;
+            }
+
+            &__item{
+                font-size: 1.5vw;
+                font-weight: 600;
+                margin-bottom: 16px;
+                margin-left: 16px;
+            }
+    
+            &__value{
+                width: 90%;
+                font-size: 1.3vw;
+                margin-left: 16px;
+                margin-bottom: 16px;
+            }
+        }
+    
+        .link-btng{
+            width: 213px;
+            margin-left: auto;
+            margin-right: auto;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin-bottom: 40px;
+
+
+            &__claim{
+                margin-bottom: 16px;
+                width: 213px;
+                height: 48px;
+                background: #957AFF;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 213px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 2.6;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }
+            }
+    
+            &__terms{
+                width: 213px;
+                margin-bottom: 16px;
+                height: 48px;
+                background: #ffffff;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 213px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 2.6;
+                    color: #957AFF;
+                    text-decoration: none;
+                }
+            }
+
+            &__delete{
+                text-align: center;
+                width: 213px;
+                height: 48px;
+                background: #fff;
+                border-radius: 10px;
+                border: 1px solid #957AFF;
+                cursor: pointer;
+
+                .md-btn {
+                    display: block;
+                    line-height: 2.6;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #957AFF;
+                    text-decoration: none;
+                    
+                }
+            }
+
+            .modal-body {
+                position: fixed;
+                top: 20%;
+                left: 10%;
+                z-index: 10000;
+                display: none;
+                width: 80%;
+                height: 356px;
+                background-color: #fff;
+                border-radius: 10px;
+
+                .modal-p {
+                    width: 90%;
+                    margin-top: 60px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 80px;
+
+                    P {
+                        &:nth-child(1) {
+                            font-size: 28px;
+                            color: #957AFF;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .modal-btn {
+                    width: 275px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    .modal-delete {
+                        width: 128px;
+                        height: 48px;
+                        border-radius: 10px;
+                        background-color: #957AFF;
+                        border: none;
+                        cursor: pointer;
+
+                        a {
+                            color: #fff;
+                            font-weight: 600;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .md-close {
+                        margin-left: 15px;
+                        width: 128px;
+                        height: 48px;
+                        border-radius: 10px;
+                        background-color: #fff;
+                        border: 1px solid #957AFF;
+                        color: #957AFF;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .md-overlay{
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: .7;
+                z-index: 9999;
+            }
+
+        }
+
+        &.fixed {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+        }
+        
+    
+        .contract-plas{
+            margin: 24px 0px 94px 0px;
+            
+            &__btn{
+                display: block;
+                margin: 0 auto;
+                width: 213px;
+                height: 48px;
+                background: #ffffff;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 207px;
+                    line-height: 2.6;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #957AFF;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@include pc {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        font-family: "Noto Sans JP", Helvetica, sans-serif, "hiraginosans" !important;
+        margin: 0;
+        padding: 0;
+
+    
+        .m-contener {
+            display: flex;
+        }
+        
+        .mypage-left {
+            position: relative;
+            width: 20%;
+            min-height: 100%;
+            background-color: #957AFF;
+
+            ul {
+                margin-left: auto;
+                margin-right: auto;
+                width: 90%;
+                list-style-type: none;
+
+                li {
+                    margin-top: 25px;
+
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+
+        .m-wrap{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+        }
+
+    
+        .home-m{
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+
+            &__name{
+                margin-top: 30px;
+                font-size: 14px;
+                margin-bottom: 40px;
+                color: #2C2C2C;
+            }
+    
+            &__ttl{
+                font-size: 28px;
+                margin-bottom: 16px;
+                color: #2C2C2C;
+            }
+    
+            &__text{
+                font-size: 14px;
+                line-height: 180%;
+                margin-bottom: 40px;
+                color: #2C2C2C;
+            }
+    
+            &__device-entry{
+                margin-left: auto;
+                margin-right: auto;
+                width: 60%;
+                height: 187px;
+                background: #FFEFEF;
+                margin-bottom: 40px;
+    
+                &--text{
+                    padding: 24px 24px 16px 24px;
+                    color: #2C2C2C;
+                }
+    
+                &--btn{
+                    display: block;
+                    margin: auto;
+                    width: 223px;
+                    height: 48px;
+                    background: #FFFFFF;
+                    border: 1px solid #957AFF;
+                    color: #957AFF;
+                    font-weight: 700;
+                    border-radius: 24px;
+                }
+            }
+        }
+    
+        .Contractor{
+            &__ttl{
+                font-size: 18px;
+                border-bottom: solid 2px #D9D9D9;
+                width: 100%;
+                padding-bottom: 8px;
+                color: #2C2C2C;
+            }
+    
+            &__list{
+                display: flex;
+                width: 100%;
+                margin-top: 24px;
+
+                .Contractor__left {
+                    width: 50%;
+                }
+
+                .Contractor__right {
+                    width: 50%;
+                }
+    
+                &--ttl{
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    color: #2C2C2C;
+                    margin-bottom: 8px;
+                }
+    
+                &--data{
+                    margin-left: 0;
+                    margin-bottom: 24px;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 25.2px;
+                    color: #2C2C2C;
+                }
+            }
+        }
+    
+        .change-btng{
+            text-align: center;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin-bottom: 40px;
+            &__user{
+                margin-bottom: 16px;
+                width: 213px;
+                height: 48px;
+                background: #957AFF;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 207px;
+                    line-height: 2.6;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }
+            }
+    
+            &__payment{
+                width: 213px;
+                margin-left: 15px;
+                height: 48px;
+                background: #ffffff;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 207px;
+                    line-height: 2.6;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #957AFF;
+                    text-decoration: none;
+                }
+            }
+        }
+    
+        
+        .contract{
+            &__ttl{
+                font-size: 18px;
+                border-bottom: solid 2px #D9D9D9;
+                width: 100%;
+                padding-bottom: 8px;
+                margin-bottom: 24px;
+                color: #2C2C2C;
+            }
+        }
+    
+        .contract-cont{
+            margin-top: 2%;
+            width: 100%;
+            border: solid 1px #D9D9D9;
+            border-radius: 8px;
+    
+            &__ttl{
+                color: #2C2C2C;
+            }
+    
+            &__data{
+                display: none;
+                margin-left: 0;
+                color: #2C2C2C;
+
+                .data-flex {
+                    display: flex;
+                    width: 95%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 56px;
+                }
+            }
+        }
+    
+        .subject{
+            display: flex;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+
+            .device-icon-box {
+                margin-left: 10px;
+                width: 40px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &__ttl{
+                margin-left: 10px;
+
+                &--device{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 27px;
+                    margin: 0;
+                }
+                &--name{
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 25.2px;
+                    margin: 0;
+                }
+            }
+
+            &__empty{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+            }
+    
+            &__judging{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+                font-size: 12px;
+                background: #E3F5F4;
+                color: #4E9591;
+                margin-top: 10px;
+                line-height: 240%;
+                text-align: center;
+            }
+
+            &__done{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+                font-size: 12px;
+                background: #EAE4FF;
+                color: #957AFF;
+                margin-top: 10px;
+                line-height: 240%;
+                text-align: center;
+            }
+
+            &__impossible{
+                margin-left: auto;
+                margin-right: 10px;
+                width: 70px;
+                height: 30px;
+                font-size: 12px;
+                background: #FFEFEF;
+                color: #FF2828;
+                margin-top: 10px;
+                line-height: 240%;
+                text-align: center;
+            }
+    
+            &__btn{
+                &--line{
+                    position: relative;
+                    top: 50%;
+                    margin-right: 10px;
+                    transform: translateY(-50%);
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    text-indent: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+    
+                    &:before,&:after{
+                        display: block;
+                        content: '';
+                        background-color: #000;
+                        position: absolute;
+                        width: 13px;
+                        height: 2px;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    
+    
+        .subject__btn--line:before {
+            width: 2px;
+            height: 13px;
+        }
+    
+        .contract-cont__ttl.selected .subject__btn--line:before {
+            content: normal;
+        }
+    
+        .data-line {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 24px;
+            width: 98%;
+            height: 2px;
+            background-color: #C1C2CA;
+        }
+
+        .contract-info{
+            width: 28%;
+            text-align: left;
+    
+            &__item{
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 16px;
+                margin-left: 20px;
+            }
+    
+            &__value{
+                font-size: 14px;
+                margin-left: 20px;
+                margin-bottom: 16px;
+            }
+        }
+
+        .agreement-info {
+            width: 35%;
+            margin-left: 4%;
+
+            .agreement-ttl {
+                line-height: 2;
+                padding-left: 5px;
+                margin-bottom: 16px;
+                background-color: #C1C2CA;
+            }
+
+            &__item{
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 16px;
+                margin-left: 20px;
+            }
+    
+            &__value{
+                font-size: 14px;
+                margin-left: 20px;
+                margin-bottom: 16px;
+            }
+
+             .state {
+                font-size: 14px;
+                margin-left: 20px;
+                margin-top: -16px;
+            }
+        }
+
+        .client-info {
+            width: 29%;
+            margin-left: 4%;
+
+            .client-ttl {
+                line-height: 2;
+                padding-left: 5px;
+                margin-bottom: 16px;
+                background-color: #C1C2CA;
+            }
+
+            &__item{
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 16px;
+                margin-left: 20px;
+            }
+    
+            &__value{
+                font-size: 14px;
+                margin-left: 20px;
+                margin-bottom: 16px;
+            }
+        }
+    
+        .link-btng{
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin-bottom: 40px;
+            text-align: center;
+
+            .error {
+                width: 250px;
+                margin-left: auto;
+                color: red;
+                margin-bottom: 8px;
+            }
+
+            &__claim{
+                text-align: center;
+                margin-bottom: 16px;
+                width: 213px;
+                height: 48px;
+                background: #957AFF;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 213px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 2.6;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    
+                }
+            }
+    
+            &__terms{
+                text-align: center;
+                margin-left: 15px;
+                width: 213px;
+                height: 48px;
+                background: #ffffff;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    width: 213px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 2.6;
+                    color: #957AFF;
+                    text-decoration: none;
+                }
+            }
+
+            &__delete{
+                text-align: center;
+                margin-left: 15px;
+                width: 213px;
+                height: 48px;
+                background: #fff;
+                border-radius: 10px;
+                border: 1px solid #957AFF;
+                cursor: pointer;
+
+                .md-btn {
+                    display: block;
+                    line-height: 2.6;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #957AFF;
+                    text-decoration: none;
+                    
+                }
+            }
+
+            .modal-body {
+                position: fixed;
+                top: 20%;
+                left: 25%;
+                z-index: 10000;
+                display: none;
+                width: 640px;
+                height: 356px;
+                background-color: #fff;
+                border-radius: 10px;
+
+                .modal-p {
+                    width: 480px;
+                    margin-top: 60px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 80px;
+
+                    P {
+                        &:nth-child(1) {
+                            font-size: 28px;
+                            color: #957AFF;
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .modal-btn {
+                    width: 275px;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    .modal-delete {
+                        width: 128px;
+                        height: 48px;
+                        border-radius: 10px;
+                        background-color: #957AFF;
+                        border: none;
+                        cursor: pointer;
+
+                        a {
+                            color: #fff;
+                            font-weight: 600;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .md-close {
+                        margin-left: 15px;
+                        width: 128px;
+                        height: 48px;
+                        border-radius: 10px;
+                        background-color: #fff;
+                        border: 1px solid #957AFF;
+                        color: #957AFF;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .md-overlay{
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: .7;
+                z-index: 9999;
+            }
+            
+
+        }
+
+        &.fixed {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+        }
+        
+    
+        .contract-plas{
+            margin: 24px 0px 94px 0px;
+            &__btn{
+                display: block;
+                margin: 0 auto;
+                width: 213px;
+                height: 48px;
+                background: #ffffff;
+                border-radius: 10px;
+                border: solid 1px #957AFF;
+    
+                &--link{
+                    display: block;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #957AFF;
+                    text-decoration: none;
+                    line-height: 2.6;
+                    width: 207px;
+                }
+            }
+        }
+    }
+}

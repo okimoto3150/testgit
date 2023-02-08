@@ -1,0 +1,416 @@
+@media only screen and (max-width: 600px) {
+  body .checkout {
+    width: 312px;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  body .checkout__ttl {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 24px;
+    color: #957AFF;
+  }
+  body .checkout__ttl02 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  body .checkout__img {
+    margin-bottom: 16px;
+  }
+  body .checkout__text {
+    font-size: 14px;
+    color: #2C2C2C;
+  }
+  body .checkout__sec {
+    margin-top: 40px;
+  }
+  body .checkout__sec--ttl {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: solid 2px #D9D9D9;
+    color: #2C2C2C;
+  }
+  body .form-group {
+    margin-top: 24px;
+  }
+  body .panel-heading__ttl {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: #2C2C2C;
+  }
+  body .panel-heading__type {
+    font-weight: 400;
+    font-size: 16px;
+    color: #2C2C2C;
+  }
+  body .panel-heading input[type=radio] {
+    display: none;
+  }
+  body .panel-heading label {
+    position: relative;
+    padding-left: 43px;
+  }
+  body .panel-heading input[type=radio] + label::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #000;
+    left: 0;
+    top: 0;
+  }
+  body .panel-heading input[type=radio] + label::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #957AFF;
+    left: 6px;
+    top: 6px;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  body .panel-heading input[type=radio]:checked + label::after {
+    opacity: 1;
+  }
+  body .card-number {
+    width: 312px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .card-cvc {
+    width: 312px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .flex {
+    display: flex;
+  }
+  body .card-expiry-month {
+    width: 80px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .card-expiry-year {
+    width: 80px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .control-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2C2C2C;
+  }
+  body .hide {
+    visibility: hidden;
+  }
+  body .btn-primary {
+    display: block;
+    width: 128px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    color: #FFF;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1099px) {
+  body .checkout {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  body .checkout__ttl {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 24px;
+    color: #957AFF;
+  }
+  body .checkout__ttl02 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  body .checkout__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 312px;
+    margin-bottom: 16px;
+  }
+  body .checkout__text {
+    font-size: 14px;
+    color: #2C2C2C;
+  }
+  body .checkout__sec {
+    margin-top: 40px;
+  }
+  body .checkout__sec--ttl {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: solid 2px #957AFF;
+    color: #2C2C2C;
+  }
+  body .form-group {
+    margin-top: 24px;
+  }
+  body .panel-heading__ttl {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: #2C2C2C;
+  }
+  body .panel-heading__type {
+    font-weight: 400;
+    font-size: 16px;
+    color: #2C2C2C;
+  }
+  body .panel-heading input[type=radio] {
+    display: none;
+  }
+  body .panel-heading label {
+    position: relative;
+    padding-left: 43px;
+  }
+  body .panel-heading input[type=radio] + label::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #000;
+    left: 0;
+    top: 0;
+  }
+  body .panel-heading input[type=radio] + label::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #957AFF;
+    left: 6px;
+    top: 6px;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  body .panel-heading input[type=radio]:checked + label::after {
+    opacity: 1;
+  }
+  body .card-number {
+    width: 60%;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .card-cvc {
+    width: 60%;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .flex {
+    display: flex;
+  }
+  body .card-expiry-month {
+    width: 80px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .card-expiry-year {
+    width: 80px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .control-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2C2C2C;
+  }
+  body .hide {
+    visibility: hidden;
+  }
+  body .btn-primary {
+    display: block;
+    width: 128px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    color: #FFF;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body .checkout {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  body .checkout__ttl {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 24px;
+    color: #957AFF;
+  }
+  body .checkout__ttl02 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  body .checkout__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 312px;
+    margin-bottom: 16px;
+  }
+  body .checkout__text {
+    font-size: 14px;
+    color: #2C2C2C;
+  }
+  body .checkout__sec {
+    margin-top: 40px;
+  }
+  body .checkout__sec--ttl {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: solid 2px #957AFF;
+    color: #2C2C2C;
+  }
+  body .form-group {
+    margin-top: 24px;
+  }
+  body .panel-heading__ttl {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: #2C2C2C;
+  }
+  body .panel-heading__type {
+    font-weight: 400;
+    font-size: 16px;
+    color: #2C2C2C;
+  }
+  body .panel-heading input[type=radio] {
+    display: none;
+  }
+  body .panel-heading label {
+    position: relative;
+    padding-left: 43px;
+  }
+  body .panel-heading input[type=radio] + label::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #000;
+    left: 0;
+    top: 0;
+  }
+  body .panel-heading input[type=radio] + label::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #957AFF;
+    left: 6px;
+    top: 6px;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  body .panel-heading input[type=radio]:checked + label::after {
+    opacity: 1;
+  }
+  body .card-number {
+    width: 50%;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .card-cvc {
+    width: 50%;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .flex {
+    display: flex;
+  }
+  body .card-expiry-month {
+    width: 80px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .card-expiry-year {
+    width: 80px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .control-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2C2C2C;
+  }
+  body .hide {
+    visibility: hidden;
+  }
+  body .btn-primary {
+    display: block;
+    width: 128px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    color: #FFF;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=checkout.css.map */

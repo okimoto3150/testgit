@@ -1,0 +1,155 @@
+@media only screen and (max-width: 600px) {
+  body * {
+    padding: 0;
+    margin: 0;
+  }
+  body .footer {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56px;
+    background-color: #F2F3F5;
+  }
+  body .footer .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 56px;
+  }
+  body .footer ul {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+  body .footer ul li {
+    margin-top: 15px;
+    list-style-type: none;
+  }
+  body .footer ul li a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #2C2C2C;
+  }
+  body .footer ul li span {
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  body .footer ul li .coporate:before {
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+    content: url(../img/top/coporate.png);
+    width: 16px;
+    height: 16px;
+  }
+  body .footer .copyright {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1099px) {
+  body * {
+    margin: 0;
+    padding: 0;
+  }
+  body .footer {
+    position: relative;
+    padding-bottom: 56px;
+    background-color: #F2F3F5;
+  }
+  body .footer .footer-box {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .footer .footer-box .footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 56px;
+  }
+  body .footer .footer-box ul {
+    display: flex;
+    margin-top: 20px;
+  }
+  body .footer .footer-box ul li {
+    margin-right: 30px;
+    list-style-type: none;
+  }
+  body .footer .footer-box ul li a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #2C2C2C;
+  }
+  body .footer .footer-box ul li span {
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  body .footer .footer-box ul li .coporate:before {
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+    content: url(../img/top/coporate.png);
+    width: 16px;
+    height: 16px;
+  }
+  body .footer .footer-box .copyright {
+    margin-top: 23px;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body * {
+    margin: 0;
+    padding: 0;
+  }
+  body .footer {
+    position: relative;
+    padding-bottom: 56px;
+    background-color: #F2F3F5;
+  }
+  body .footer .footer-box {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .footer .footer-box .footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 56px;
+  }
+  body .footer .footer-box ul {
+    display: flex;
+    margin-top: 20px;
+  }
+  body .footer .footer-box ul li {
+    margin-right: 30px;
+    list-style-type: none;
+  }
+  body .footer .footer-box ul li a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #2C2C2C;
+  }
+  body .footer .footer-box ul li span {
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  body .footer .footer-box ul li .coporate:before {
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+    content: url(../img/top/coporate.png);
+    width: 16px;
+    height: 16px;
+  }
+  body .footer .footer-box .copyright {
+    margin-top: 25px;
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=footer.css.map */

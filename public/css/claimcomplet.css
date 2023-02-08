@@ -1,0 +1,141 @@
+@media only screen and (max-width: 600px) {
+  .complet {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 13%;
+    width: 70%;
+  }
+  .complet__name {
+    display: flex;
+    font-size: 14px;
+  }
+  .complet__img {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 312px;
+  }
+  .complet__ttl {
+    margin-top: 40px;
+    color: #957AFF;
+    font-size: 28px;
+  }
+  .complet__ttl02 {
+    margin-top: 16px;
+    font-size: 22px;
+  }
+  .complet__text {
+    margin-top: 32px;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  .complet .claimcomp__btn {
+    width: 156px;
+    height: 48px;
+    background: #957AFF;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin: auto;
+  }
+  .complet .claimcomp__btn--link {
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1099px) {
+  .complet {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16%;
+    width: 70%;
+  }
+  .complet__name {
+    display: flex;
+    font-size: 14px;
+  }
+  .complet__img {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 312px;
+  }
+  .complet__ttl {
+    margin-top: 40px;
+    color: #957AFF;
+    font-size: 28px;
+  }
+  .complet__ttl02 {
+    margin-top: 16px;
+    font-size: 22px;
+  }
+  .complet__text {
+    margin-top: 50px;
+    margin-bottom: 90px;
+    font-size: 14px;
+  }
+  .complet .claimcomp__btn {
+    width: 156px;
+    height: 48px;
+    background: #957AFF;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin: auto;
+  }
+  .complet .claimcomp__btn--link {
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .complet {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 13%;
+    width: 70%;
+  }
+  .complet__name {
+    display: flex;
+    font-size: 14px;
+  }
+  .complet__img {
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 312px;
+  }
+  .complet__ttl {
+    margin-top: 40px;
+    color: #957AFF;
+    font-size: 28px;
+  }
+  .complet__ttl02 {
+    margin-top: 16px;
+    font-size: 22px;
+  }
+  .complet__text {
+    margin-top: 32px;
+    margin-bottom: 40px;
+    font-size: 14px;
+  }
+  .complet .claimcomp__btn {
+    width: 156px;
+    height: 48px;
+    background: #957AFF;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin: auto;
+  }
+  .complet .claimcomp__btn--link {
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}/*# sourceMappingURL=claimcomplet.css.map */

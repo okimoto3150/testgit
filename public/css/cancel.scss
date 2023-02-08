@@ -1,0 +1,212 @@
+@import './mixin';
+
+@include sp {
+    .m-wrap {
+        margin-top: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    
+        .name {
+            font-size: 14px;
+            color: #2C2C2C;
+        }
+    
+        h2 {
+            margin-top: 40px;
+            font-size: 28px;
+            color: #957AFF;
+        }
+    
+        .cancel-text {
+            margin-top: 24px;
+    
+            p {
+                line-height: 1.9;
+                font-size: 14px;
+                color: #2C2C2C;
+    
+                span {
+                    color: #FF2828;
+                }
+            }
+        }
+    
+        .cancel-btn-box {
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 100px;
+            width: 224px;
+    
+            .cancel-btn {
+                width: 224px;
+                height: 48px;
+                border-radius: 10px;
+                border: 1px solid #957AFF;
+                background-color: #fff;
+                cursor: pointer;
+
+                a {
+                    color: #957AFF;
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+            }
+    
+            .return-btn {
+                margin-top: 30px;
+                width: 224px;
+                height: 48px;
+                border-radius: 10px;
+                background-color: #957AFF;
+                border: none;
+                color: #fff;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+
+@include tb {
+    .m-wrap {
+        margin-top: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    
+        .name {
+            font-size: 14px;
+            color: #2C2C2C;
+        }
+    
+        h2 {
+            margin-top: 40px;
+            font-size: 28px;
+            color: #957AFF;
+        }
+    
+        .cancel-text {
+            margin-top: 24px;
+    
+            p {
+                font-size: 14px;
+                color: #2C2C2C;
+                line-height: 1.9;
+    
+                span {
+                    color: #FF2828;
+                }
+            }
+        }
+    
+        .cancel-btn-box {
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 200px;
+            width: 435px;
+    
+            .cancel-btn {
+                width: 192px;
+                height: 48px;
+                border-radius: 10px;
+                border: 1px solid #957AFF;
+                background-color: #fff;
+                cursor: pointer;
+
+                a {
+                    color: #957AFF;
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+            }
+    
+            .return-btn {
+                margin-left: 15px;
+                width: 224px;
+                height: 48px;
+                border-radius: 10px;
+                background-color: #957AFF;
+                border: none;
+                color: #fff;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+@include pc {
+
+    .m-wrap {
+        margin-top: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+    
+        .name {
+            font-size: 14px;
+            color: #2C2C2C;
+        }
+    
+        h2 {
+            margin-top: 40px;
+            font-size: 28px;
+            color: #957AFF;
+        }
+    
+        .cancel-text {
+            margin-top: 24px;
+    
+            p {
+                font-size: 14px;
+                color: #2C2C2C;
+                line-height: 1.9;
+    
+                span {
+                    color: #FF2828;
+                }
+            }
+        }
+    
+        .cancel-btn-box {
+            margin-top: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 200px;
+            width: 435px;
+    
+            .cancel-btn {
+                width: 192px;
+                height: 48px;
+                border-radius: 10px;
+                border: 1px solid #957AFF;
+                background-color: #fff;
+                cursor: pointer;
+
+                a {
+                    color: #957AFF;
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+            }
+    
+            .return-btn {
+                margin-left: 15px;
+                width: 224px;
+                height: 48px;
+                border-radius: 10px;
+                background-color: #957AFF;
+                border: none;
+                color: #fff;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    }
+}

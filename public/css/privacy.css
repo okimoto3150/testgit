@@ -1,0 +1,317 @@
+@media only screen and (max-width: 600px) {
+  body .privacy {
+    width: 312px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  body .privacy__ttl {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 24px;
+    color: #957AFF;
+  }
+  body .privacy__ttl02 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  body .privacy__img {
+    margin-bottom: 16px;
+  }
+  body .privacy__text {
+    font-size: 14px;
+    color: #2C2C2C;
+  }
+  body .privacy .input-ttl {
+    margin-top: 40px;
+    line-height: 2;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 2px solid #957AFF;
+  }
+  body .privacy__btn {
+    display: block;
+    width: 164px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    color: #FFF;
+    cursor: pointer;
+  }
+  body .privacy-form {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  body .privacy-form__dl {
+    margin-bottom: 24px;
+    color: #2C2C2C;
+  }
+  body .privacy-form__dt {
+    display: flex;
+    margin-bottom: 8px;
+  }
+  body .privacy-form__dt--label {
+    font-weight: 700;
+  }
+  body .privacy-form__dt .required-box {
+    margin-left: auto;
+    width: 33px;
+    height: 26px;
+    background-color: #71CCC7;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.8;
+    border-radius: 3px;
+    text-align: center;
+  }
+  body .privacy-form__dd--label {
+    font-weight: 600;
+  }
+  body .privacy-form__dd--input {
+    width: 312px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .privacy-form__dd select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-image: url(../img/Vector.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 13px 8px;
+  }
+  body .privacy-form__dd .yubinbango-mark {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  body .privacy-form__dd .yubin-input {
+    width: 292px;
+  }
+  body .form-invalid {
+    color: #FF2828;
+    font-size: 14px;
+  }
+  body .input-invalid {
+    border: 1px solid #FF2828;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1099px) {
+  body .privacy {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  body .privacy__ttl {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 24px;
+    color: #957AFF;
+  }
+  body .privacy__ttl02 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  body .privacy__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 312px;
+    margin-bottom: 16px;
+  }
+  body .privacy__text {
+    display: none;
+  }
+  body .privacy .input-ttl {
+    margin-top: 20px;
+    line-height: 2;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 2px solid #957AFF;
+  }
+  body .privacy__btn {
+    display: block;
+    width: 164px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    color: #FFF;
+    cursor: pointer;
+  }
+  body .privacy-form {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  body .privacy-form__dl {
+    margin-bottom: 24px;
+    color: #2C2C2C;
+  }
+  body .privacy-form__dt {
+    margin-bottom: 8px;
+    display: flex;
+    width: 400px;
+  }
+  body .privacy-form__dt--label {
+    font-weight: 700;
+  }
+  body .privacy-form__dt .required-box {
+    margin-left: auto;
+    width: 33px;
+    height: 26px;
+    background-color: #71CCC7;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.8;
+    border-radius: 3px;
+    text-align: center;
+  }
+  body .privacy-form__dd--label {
+    font-weight: 600;
+  }
+  body .privacy-form__dd--input {
+    width: 400px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .privacy-form__dd select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-image: url(../img/Vector.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 13px 8px;
+  }
+  body .privacy-form__dd .yubinbango-mark {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  body .privacy-form__dd .yubin-input {
+    width: 380px;
+  }
+  body .form-invalid {
+    color: #FF2828;
+    font-size: 14px;
+  }
+  body .input-invalid {
+    border: 1px solid #FF2828;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body .privacy {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  body .privacy__ttl {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 24px;
+    color: #957AFF;
+  }
+  body .privacy__ttl02 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: #2C2C2C;
+  }
+  body .privacy__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 312px;
+    margin-bottom: 16px;
+  }
+  body .privacy__text {
+    display: none;
+  }
+  body .privacy .input-ttl {
+    margin-top: 20px;
+    line-height: 2;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 2px solid #957AFF;
+  }
+  body .privacy__btn {
+    display: block;
+    width: 164px;
+    height: 48px;
+    background-color: #957AFF;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    color: #FFF;
+    cursor: pointer;
+  }
+  body .privacy-form {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  body .privacy-form__dl {
+    margin-bottom: 24px;
+    color: #2C2C2C;
+  }
+  body .privacy-form__dt {
+    margin-bottom: 8px;
+    display: flex;
+    width: 500px;
+  }
+  body .privacy-form__dt--label {
+    font-weight: 700;
+  }
+  body .privacy-form__dt .required-box {
+    margin-left: auto;
+    width: 33px;
+    height: 26px;
+    background-color: #71CCC7;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.8;
+    border-radius: 3px;
+    text-align: center;
+  }
+  body .privacy-form__dd--label {
+    font-weight: 600;
+  }
+  body .privacy-form__dd--input {
+    width: 500px;
+    height: 36px;
+    border: solid 1px #C1C2CA;
+    border-radius: 4px;
+  }
+  body .privacy-form__dd select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-image: url(../img/Vector.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 13px 8px;
+  }
+  body .privacy-form__dd .yubinbango-mark {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  body .privacy-form__dd .yubin-input {
+    width: 480px;
+  }
+  body .form-invalid {
+    color: #FF2828;
+    font-size: 14px;
+  }
+  body .input-invalid {
+    border: 1px solid #FF2828;
+  }
+}/*# sourceMappingURL=privacy.css.map */

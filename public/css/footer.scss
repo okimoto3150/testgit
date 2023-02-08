@@ -1,0 +1,203 @@
+@import './mixin';
+
+body{
+
+    @include sp {
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56px;
+            background-color: #F2F3F5;
+
+            .footer-logo {
+                margin-left: auto;
+                margin-right: auto;
+                width: 60%;
+                font-size: 24px;
+                font-weight: 700;
+                padding-top: 56px;
+            }
+    
+            ul {
+                margin-top: 15px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 60%;
+
+    
+                li {
+                    margin-top: 15px;
+                    list-style-type: none;
+    
+                    a {
+                        font-size: 12px;
+                        text-decoration: none;
+                        color: #2C2C2C;
+                    }
+    
+                    span {
+                        margin-left: 20px;
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+    
+                    .coporate {
+                        &:before {
+                            position: relative;
+                            top: 5px;
+                            margin-right: 5px;
+                            content: url(../img/top/coporate.png);
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+            }
+    
+            .copyright {
+                margin-top: 24px;
+                text-align: center;
+                font-size: 10px;
+            }
+        }
+    
+    }
+
+    @include tb {
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer {
+            position: relative;
+            padding-bottom: 56px;
+            background-color: #F2F3F5;
+    
+            .footer-box {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+        
+            
+    
+                .footer-logo {
+                    font-size: 24px;
+                    font-weight: 700;
+                    padding-top: 56px;
+                }
+    
+                ul {
+                    display: flex;
+                    margin-top: 20px;
+    
+                    li {
+                        margin-right: 30px;
+                        list-style-type: none;
+    
+                        a {
+                            font-size: 12px;
+                            text-decoration: none;
+                            color: #2C2C2C;
+                        }
+    
+                        span {
+                            margin-left: 20px;
+                            font-size: 12px;
+                            font-weight: 600;
+                        }
+    
+                        .coporate {
+                            &:before {
+                                position: relative;
+                                top: 5px;
+                                margin-right: 5px;
+                                content: url(../img/top/coporate.png);
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
+                }
+    
+                .copyright {
+                    margin-top: 23px;
+                    font-size: 10px;
+                }
+            }
+        }
+    
+    }
+
+    @include pc {
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer {
+            position: relative;
+            padding-bottom: 56px;
+            background-color: #F2F3F5;
+    
+            .footer-box {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+        
+            
+    
+                .footer-logo {
+                    font-size: 24px;
+                    font-weight: 700;
+                    padding-top: 56px;
+                }
+    
+                ul {
+                    display: flex;
+                    margin-top: 20px;
+    
+                    li {
+                        margin-right: 30px;
+                        list-style-type: none;
+    
+                        a {
+                            font-size: 12px;
+                            text-decoration: none;
+                            color: #2C2C2C;
+                        }
+    
+                        span {
+                            margin-left: 20px;
+                            font-size: 12px;
+                            font-weight: 600;
+                        }
+    
+                        .coporate {
+                            &:before {
+                                position: relative;
+                                top: 5px;
+                                margin-right: 5px;
+                                content: url(../img/top/coporate.png);
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+                    }
+                }
+    
+                .copyright {
+                    margin-top: 25px;
+                    font-size: 10px;
+                }
+            }
+        }
+    
+    }
+
+}

@@ -1,0 +1,47 @@
+body {
+  font-family: "Noto Sans JP", Helvetica, sans-serif, "hiraginosans" !important;
+}
+body .main {
+  background-color: #FFFFFF;
+}
+body .error {
+  text-align: center;
+  margin-top: 96px;
+  padding-bottom: 100%;
+}
+body .error__ttl {
+  font-size: 40px;
+  font-weight: 300;
+  color: #72767D;
+}
+body .error .image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+}
+body .error .image img {
+  width: 100%;
+}
+body .error__text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #383D44;
+  width: 312px;
+  display: block;
+  margin: auto;
+}
+body .error__btn {
+  width: 172px;
+  height: 48px;
+  border: solid 1px #957AFF;
+  border-radius: 10px;
+  background: #FFFFFF;
+  margin-top: 32px;
+}
+body .error__btn--link {
+  color: #957AFF;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}/*# sourceMappingURL=404.css.map */

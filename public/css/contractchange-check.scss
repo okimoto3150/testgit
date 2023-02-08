@@ -1,0 +1,314 @@
+@import './mixin';
+
+@include sp {
+
+    .check {
+        width: 312px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    
+        &__ttl{
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 24px;
+            color: #957AFF;
+        }
+    
+        &__ttl02{
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            color: #2C2C2C;
+        }
+    
+        &__text{
+            font-size: 14px;
+            color: #2C2C2C;
+        }
+    
+        &-info{
+        
+            &__list {
+                margin-top: 40px;
+                margin-bottom: 40px;
+                padding-bottom: 40px;
+                        
+                &--group{
+                    width: 50%;
+                    margin-bottom: 25px;
+                }
+    
+                &--ttl{
+                    margin-bottom: 10px;
+                    font-weight: 700;
+                    color: #2C2C2C;
+                }
+    
+                &--data{
+                    color: #2C2C2C;
+                }
+    
+                .flex-box-yuben {
+                    display: flex;
+                }
+    
+            }
+    
+            &__flex{
+                display: flex;
+                width: 271px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            &__btn{
+                display: block;
+                width: 128px;
+                height: 48px;
+                background-color: #ffffff;
+                border: solid 1px #957AFF;
+                border-radius: 10px;
+                line-height: 2.5;
+                color: #957AFF;
+                text-decoration: none;
+                font-weight: 600;
+                cursor: pointer;
+            }
+    
+            &__return{
+                display: block;
+                margin-left: 15px;
+                width: 128px;
+                height: 48px;
+                background-color: #957AFF;
+                border: none;
+                border-radius: 10px;
+                color: #FFF;
+                font-weight: 600;
+                
+            }
+    
+    
+        }
+
+        .alert {
+            display: flex;
+        }
+        
+        .error {
+            color: red;
+        }
+    }
+}
+
+@include tb {
+
+    .check {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    
+        &__ttl{
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 24px;
+            color: #957AFF;
+        }
+    
+        &__ttl02{
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            color: #2C2C2C;
+        }
+    
+        &__text{
+            font-size: 14px;
+            color: #2C2C2C;
+        }
+    
+        &-info{
+        
+            &__list {
+                margin-top: 40px;
+                margin-bottom: 40px;
+                padding-bottom: 40px;
+                        
+                &--group{
+                    width: 50%;
+                    margin-bottom: 25px;
+                }
+    
+                &--ttl{
+                    margin-bottom: 10px;
+                    font-weight: 700;
+                    color: #2C2C2C;
+                }
+    
+                &--data{
+                    color: #2C2C2C;
+                }
+    
+                .flex-box-yuben {
+                    display: flex;
+                }
+    
+            }
+    
+            &__flex{
+                display: flex;
+                width: 271px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            &__btn{
+                display: block;
+                width: 128px;
+                height: 48px;
+                background-color: #ffffff;
+                border: solid 1px #957AFF;
+                border-radius: 10px;
+                line-height: 2.5;
+                color: #957AFF;
+                text-decoration: none;
+                font-weight: 600;
+                cursor: pointer;
+            }
+    
+            &__return{
+                display: block;
+                margin-left: 15px;
+                width: 128px;
+                height: 48px;
+                background-color: #957AFF;
+                border: none;
+                border-radius: 10px;
+                color: #FFF;
+                font-weight: 600;
+                
+            }
+    
+    
+        }
+        .alert {
+            display: flex;
+        }
+        
+        .error {
+            color: red;
+        }
+    }
+}
+
+@include pc {
+
+    .check {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+    
+        &__ttl{
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 24px;
+            color: #957AFF;
+        }
+    
+        &__ttl02{
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            color: #2C2C2C;
+        }
+    
+        &__text{
+            font-size: 14px;
+            color: #2C2C2C;
+        }
+    
+        &-info{
+        
+            &__list {
+                margin-top: 40px;
+                margin-bottom: 40px;
+                padding-bottom: 40px;
+                        
+                &--group{
+                    width: 50%;
+                    margin-bottom: 25px;
+                }
+    
+                &--ttl{
+                    margin-bottom: 10px;
+                    font-weight: 700;
+                    color: #2C2C2C;
+                }
+    
+                &--data{
+                    color: #2C2C2C;
+                }
+    
+                .flex-box-yuben {
+                    display: flex;
+                }
+    
+            }
+
+
+    
+            &__flex{
+                display: flex;
+                width: 271px;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            &__btn{
+                display: block;
+                width: 128px;
+                height: 48px;
+                background-color: #ffffff;
+                border: solid 1px #957AFF;
+                border-radius: 10px;
+                line-height: 2.5;
+                color: #957AFF;
+                text-decoration: none;
+                font-weight: 600;
+                cursor: pointer;
+            }
+    
+            &__return{
+                display: block;
+                margin-left: 15px;
+                width: 128px;
+                height: 48px;
+                background-color: #957AFF;
+                border: none;
+                border-radius: 10px;
+                color: #FFF;
+                font-weight: 600;
+                
+            }
+    
+    
+        }
+
+        .alert {
+            display: flex;
+        }
+        
+        .error {
+            color: red;
+        }
+    }
+}
