@@ -120,7 +120,7 @@ class ChargeController extends Controller
     /****************************************************************************/
     public function stripePost(Request $request)
     {
-        $start = microtime(true);
+        //$start = microtime(true);
 
         // URLパラメータから代理店識別
         try {
@@ -215,9 +215,9 @@ class ChargeController extends Controller
             return back();
         }
 
-        $end = microtime(true);
-        $sec = ($end - $start);
-        $this->SendSlack('処理時間 = ' . $sec . ' 秒');
+        //$end = microtime(true);
+        //$sec = ($end - $start);
+        //$this->SendSlack('処理時間 = ' . $sec . ' 秒');
 
         // ここで画面遷移
         Session::flash('success', 'Payment successful!');
@@ -507,7 +507,8 @@ class ChargeController extends Controller
     public function SendSlack($strMessage)
     {
         str_replace('�','', $strMessage);
-        $url = 'https://hooks.slack.com/services/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';
+        $url = 'xoxb-470358952384-4697209244148-ZPihJLI3wUYbFhdh6Bc4uLns
+        ';
         $payload = [
                 'text' => $strMessage,
         ];
