@@ -507,7 +507,7 @@ class ChargeController extends Controller
     public function SendSlack($strMessage)
     {
         str_replace('�','', $strMessage);
-        $url = 'https://hooks.slack.com/services/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';
+        $url = 'https://hooks.slack.com/services/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';
         $payload = [
                 'text' => $strMessage,
         ];
