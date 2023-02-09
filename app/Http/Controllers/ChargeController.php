@@ -113,7 +113,6 @@ class ChargeController extends Controller
         return true;
     }
 
-
     /****************************************************************************/
     /* 処理概要 : STRIPE決済処理
     /* 作成日：2022/12/22
@@ -121,6 +120,8 @@ class ChargeController extends Controller
     /****************************************************************************/
     public function stripePost(Request $request)
     {
+        $start = microtime(true);
+
         // URLパラメータから代理店識別
         try {
             $strAgency = $_COOKIE["agency"];
@@ -213,6 +214,10 @@ class ChargeController extends Controller
             Session::flash('error', "ユーザ情報の作成に失敗しました。サポートまでお問い合わせください。");
             return back();
         }
+
+        $end = microtime(true);
+        $sec = ($end - $start);
+        $this->SendSlack('処理時間 = ' . $sec . ' 秒');
 
         // ここで画面遷移
         Session::flash('success', 'Payment successful!');
@@ -502,7 +507,7 @@ class ChargeController extends Controller
     public function SendSlack($strMessage)
     {
         str_replace('�','', $strMessage);
-        $url = 'https://hooks.slack.com/services/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';
+        $url = 'https://hooks.slack.com/services/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';
         $payload = [
                 'text' => $strMessage,
         ];
