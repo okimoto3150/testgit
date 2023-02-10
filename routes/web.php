@@ -104,6 +104,7 @@ Route::get('/cancel-comp', function () {
 });
 
 Route::post('/check', [App\Http\Controllers\Controller::class, 'check'])->name('check');
+Route::get('/checkout', [App\Http\Controllers\Controller::class, 'checkout'])->name('checkout');
 
 Route::post('/devicecheck', [App\Http\Controllers\HomeController::class, 'devicecheck'])->name('devicecheck');
 Route::post('/contractchangecheck', [App\Http\Controllers\HomeController::class, 'contractchangecheck'])->name('contractchangecheck')->middleware('auth');

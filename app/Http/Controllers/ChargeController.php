@@ -120,27 +120,6 @@ class ChargeController extends Controller
     /****************************************************************************/
     public function stripePost(Request $request)
     {
-        //$start = microtime(true);
-
-        // URLパラメータから代理店識別
-        try {
-            $strAgency = $_COOKIE["agency"];
-        }
-        catch (\Throwable $th) {
-            $strAgency = '';
-        }
-
-        switch ($strAgency){
-            case 'ISF2B5E8': // 代理店Aの場合
-                $strAgency = '0055h000008dOFKAA2';
-                break;
-            case 'MAH20CGG': // 代理店Bの場合
-                $strAgency = '0055h000008dOFUAA2';
-                break;
-            default: // その他は全てone net
-                $strAgency = '0055h000006j5uBAAQ';
-        }
-
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
         // ユーザー重複チェック処理
@@ -187,17 +166,6 @@ class ChargeController extends Controller
             ],
         ]);
 
-        // OAuth2.0認証処理
-        $this->m_strToken = $this->getOAuth();
-
-        // セールスフォースデータ登録処理(個人取引先)
-        $bRet = $this->SetSalesForceInsertDataAccount($res,$strAgency);
-        if ($bRet === false)
-        {
-            Session::flash('error', "申込者情報の作成に失敗しました。サポートまでお問い合わせください。");
-            return back();
-        }
-
         // Token作成処理
         $strToken = str_replace('%','',urlencode(str()->random(40)));
         $bRet = $this->SetToken($strToken);
@@ -206,18 +174,14 @@ class ChargeController extends Controller
             Session::flash('error', "Tokenの作成に失敗しました。サポートまでお問い合わせください。");
             return back();
         }
-        
+
         // ユーザー登録処理
-        $bRet = $this->SetUserData($strToken,$res);
+        $bRet = $this->SetUserData($strToken,$_COOKIE["Accountid"]);
         if ($bRet === false)
         {
             Session::flash('error', "ユーザ情報の作成に失敗しました。サポートまでお問い合わせください。");
             return back();
         }
-
-        //$end = microtime(true);
-        //$sec = ($end - $start);
-        //$this->SendSlack('処理時間 = ' . $sec . ' 秒');
 
         // ここで画面遷移
         Session::flash('success', 'Payment successful!');
@@ -525,70 +489,6 @@ class ChargeController extends Controller
     }
 
     /****************************************************************************/
-    /* 処理概要 : セールスフォースデータ登録処理(個人取引先)
-    /* 作成日：2022/12/22
-    /* 作成者：沖本
-    /****************************************************************************/
-    public function SetSalesForceInsertDataAccount(&$list,$strAgency)
-    {
-        $path = '/services/data/v55.0/composite/tree/Account/';
-        $url = 'https://onenet3.my.salesforce.com' . $path;
-        $token = $this->m_strToken;
-        
-        $arrData = array();
-        $nCnt = 1;
-
-        $Data = [
-            'attributes' => array('type'=>'Account', 'referenceId' => "ref".$nCnt),
-            'RecordTypeId'  => '0125h000000UUCBAA4',
-            'PersonEmail'=> $_COOKIE["email"],
-            'Phone'=> $_COOKIE["phone"],
-            'LastName'=> $_COOKIE["fname"].' '.$_COOKIE["lname"],
-            'Kokyakuseikanji__pc' => $_COOKIE["fname"],
-            'Kokyakumeikanji__pc' => $_COOKIE["lname"],
-            'Kokyakuseikana__pc' => $_COOKIE["fnamekana"],
-            'Kokyakumeikana__pc' => $_COOKIE["lnamekana"],
-            'Moushikomishaseinengappi__pc' => $_COOKIE["birthday"],
-            'state__c' => $_COOKIE["state"],
-            'city__c' => $_COOKIE["city"],
-            'Yuubenbango__pc' => $_COOKIE["zip_code"],
-            'line2__c' => $_COOKIE["line2"],
-            'UserAgent__c' => $_SERVER["HTTP_USER_AGENT"],
-            'Host__c' => gethostbyaddr($_SERVER['REMOTE_ADDR']),
-            'OwnerId' => $strAgency,
-            'CreatedById'  => $strAgency,
-            'LastModifiedById' => $strAgency,
-        ];
-        
-        array_push($arrData,$Data);
-
-        $postdata = [
-            'records' => $arrData,
-        ];
-
-        $params = [
-            'headers' => [
-                'Content-Type' => 'application/json',
-                'Authorization' => 'Bearer '.$token,
-            ],
-            'body' => json_encode($postdata),
-        ];
-
-        $client = new \GuzzleHttp\Client();
-        try {
-            $res = $client->request('POST', $url, $params);
-        }
-        catch (\Throwable $th) {
-            // エラー
-            $this->SendSlack("個人取引先の作成に失敗しました。");
-            return false;
-        }
-        $list = json_decode($res->getBody()->getContents(), true);
-
-        return true;
-    }
-
-    /****************************************************************************/
     /* 処理概要 : セールスフォースデータ登録処理(デバイス情報)
     /* 作成日：2023/1/17
     /* 作成者：髙山
@@ -761,17 +661,16 @@ class ChargeController extends Controller
     /* 作成日：2023/01/04
     /* 作成者：沖本
     /****************************************************************************/
-    public function SetUserData($strToken,$res)
+    public function SetUserData($strToken,$strAccountid)
     {
         $strPass = str()->random(8);
         $encryptedPassword = Hash::make($strPass);
 
-        $arr = $res["results"];
         $user = array(
             'name' => $_COOKIE["fname"].' '.$_COOKIE["lname"], 
             'email' => $_COOKIE["email"], 
             'password' => $encryptedPassword,
-            'accountid' => $arr[0]["id"]);
+            'accountid' => $strAccountid);
         // user作成
         $user = User::create($user);
 
