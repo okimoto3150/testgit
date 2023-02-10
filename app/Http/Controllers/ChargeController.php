@@ -122,19 +122,6 @@ class ChargeController extends Controller
     {
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
-        // ユーザー重複チェック処理
-        $bRet = $this->GetUserData($dtUser,$strErrorMsg);
-        if ($bRet === false)
-        {
-            Session::flash('error', "ユーザ情報の取得に失敗しました。サポートまでお問い合わせください。");
-            return back();
-        }
-        elseif (strlen($strErrorMsg) !== 0)
-        {
-            Session::flash('error', $strErrorMsg);
-            return back();
-        }
-
         try {
             $customer = Customer::create(array(
                 'name' => $_COOKIE["fname"].' '.$_COOKIE["lname"],
@@ -175,13 +162,14 @@ class ChargeController extends Controller
             return back();
         }
 
-        // ユーザー登録処理
-        $bRet = $this->SetUserData($strToken,$_COOKIE["Accountid"]);
-        if ($bRet === false)
-        {
-            Session::flash('error', "ユーザ情報の作成に失敗しました。サポートまでお問い合わせください。");
-            return back();
-        }
+        Mail::send('emails.SendMail', [
+            "name" => $_COOKIE["fname"].' '.$_COOKIE["lname"],
+            "url" => env('MAIL_RESET_PASS')."/password/reset/".$strToken."?email=".urlencode($_COOKIE["email"])
+        ], function($message) {
+            $message
+                ->to($_COOKIE["email"])
+                ->subject("ユーザー登録ありがとうございます");
+        });
 
         // ここで画面遷移
         Session::flash('success', 'Payment successful!');
@@ -628,64 +616,7 @@ class ChargeController extends Controller
         return true;
     }
 
-    /****************************************************************************/
-    /* 処理概要 : ユーザー重複チェック処理
-    /* 作成日：2023/01/04
-    /* 作成者：沖本
-    /****************************************************************************/
-    public function GetUserData(&$dtUser,&$strErrorMsg)
-    {
-        $strSql = "SELECT * FROM users WHERE email = '".$_COOKIE["email"]."'" ;
-
-        try {
-            // SQL実行
-            $dtUser = DB::connection("pgsql")->select($strSql);
-        }
-        catch (\Throwable $th) {
-            // エラー
-            $this->SendSlack($th->getMessage(),false);
-            Log::error($strSql);
-            return false;
-        }
-
-        if (count($dtUser) > 0)
-        {
-            $strErrorMsg = "既に登録済みのメールアドレスです。";
-        }
-
-        return true;
-    }
-
-    /****************************************************************************/
-    /* 処理概要 : ユーザー登録処理
-    /* 作成日：2023/01/04
-    /* 作成者：沖本
-    /****************************************************************************/
-    public function SetUserData($strToken,$strAccountid)
-    {
-        $strPass = str()->random(8);
-        $encryptedPassword = Hash::make($strPass);
-
-        $user = array(
-            'name' => $_COOKIE["fname"].' '.$_COOKIE["lname"], 
-            'email' => $_COOKIE["email"], 
-            'password' => $encryptedPassword,
-            'accountid' => $strAccountid);
-        // user作成
-        $user = User::create($user);
-
-        Mail::send('emails.SendMail', [
-            "name" => $_COOKIE["fname"].' '.$_COOKIE["lname"],
-            "url" => env('MAIL_RESET_PASS')."/password/reset/".$strToken."?email=".urlencode($_COOKIE["email"])
-        ], function($message) {
-            $message
-                ->to($_COOKIE["email"])
-                ->subject("ユーザー登録ありがとうございます");
-        });
-
-        return true;
-    }
-
+    
     /****************************************************************************/
     /* 処理概要 : Token登録処理
     /* 作成日：2023/01/06

@@ -7,53 +7,78 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
+
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function check(Request $moji)
-    {
-        $data1 = $moji::all();
-        return view('check',compact('data1'));
-    }
+        public function check(Request $moji)
+        {
+            $data1 = $moji::all();
+            return view('check',compact('data1'));
+        }
 
-    public function checkout(Request $moji)
-    {
-         try {
-              $strAgency = $_COOKIE["agency"];
-         }
-         catch (\Throwable $th) {
-             $strAgency = '';
-         }
-         switch ($strAgency){
-             case 'ISF2B5E8': // 代理店Aの場合
-                 $strAgency = '0055h000008dOFKAA2';
-                 break;
-             case 'MAH20CGG': // 代理店Bの場合
-                 $strAgency = '0055h000008dOFUAA2';
-                 break;
-             default: // その他は全てone net
-                 $strAgency = '0055h000006j5uBAAQ';
-         }
+        public function checkout(Request $moji)
+        {
+            // ユーザー重複チェック処理
+            $bRet = $this->GetUserData($dtUser,$strErrorMsg);
+            if ($bRet === false)
+            {
+                Session::flash('error', "ユーザ情報の取得に失敗しました。サポートまでお問い合わせください。");
+                return back();
+            }
+            elseif (strlen($strErrorMsg) !== 0)
+            {
+                Session::flash('error', $strErrorMsg);
+                return back();
+            }
+
+            try {
+                $strAgency = $_COOKIE["agency"];
+            }
+            catch (\Throwable $th) {
+                $strAgency = '';
+            }
+            switch ($strAgency){
+                 case 'ISF2B5E8': // 代理店Aの場合
+                    $strAgency = '0055h000008dOFKAA2';
+                    break;
+                 case 'MAH20CGG': // 代理店Bの場合
+                    $strAgency = '0055h000008dOFUAA2';
+                    break;
+                 default: // その他は全てone net
+                    $strAgency = '0055h000006j5uBAAQ';
+            }
         
-         try {
-                 $strAccountid = $_COOKIE["Accountid"];
-             }
-             catch (\Throwable $th) {
+            try {
+                $strAccountid = $_COOKIE["Accountid"];
+            }
+            catch (\Throwable $th) {
 
                  // OAuth2.0認証処理
-                 $this->m_strToken = $this->getOAuth();
+                $this->m_strToken = $this->getOAuth();
+                // セールスフォースデータ登録処理(個人取引先)
+                $bRet = $this->SetSalesForceInsertDataAccount($res,$strAgency);
+                if ($bRet === false)
+                {
+                    Session::flash('error', "申込者情報の作成に失敗しました。サポートまでお問い合わせください。");
+                    return back();
+                }
+                $arr = $res["results"];
+                setcookie("Accountid",$arr[0]["id"]);
 
-                 // セールスフォースデータ登録処理(個人取引先)
-                 $bRet = $this->SetSalesForceInsertDataAccount($res,$strAgency);
-                 if ($bRet === false)
-                 {
-                     Session::flash('error', "申込者情報の作成に失敗しました。サポートまでお問い合わせください。");
-                     return back();
-                 }
-                 $arr = $res["results"];
-                 setcookie("Accountid",$arr[0]["id"]);
+                // ユーザー登録処理
+                $bRet = $this->SetUserData($arr[0]["id"]);
+                if ($bRet === false)
+                {
+                    Session::flash('error', "ユーザ情報の作成に失敗しました。サポートまでお問い合わせください。");
+                    return back();
+                }
              }
 
              return view('checkout');
@@ -154,5 +179,78 @@ class Controller extends BaseController
             $resAry  = json_decode($resJson, true);
 
             return $resAry['access_token'] ?? '';
+        }
+
+        /****************************************************************************/
+        /* 処理概要 : ユーザー重複チェック処理
+        /* 作成日：2023/01/04
+        /* 作成者：沖本
+        /****************************************************************************/
+        public function GetUserData(&$dtUser,&$strErrorMsg)
+        {
+            $strSql = "SELECT * FROM users WHERE email = '".$_COOKIE["email"]."'" ;
+
+            try {
+                // SQL実行
+                $dtUser = DB::connection("pgsql")->select($strSql);
+            }
+            catch (\Throwable $th) {
+                // エラー
+                $this->SendSlack($th->getMessage(),false);
+                Log::error($strSql);
+                return false;
+            }
+
+            if (count($dtUser) > 0)
+            {
+                $strErrorMsg = "既に登録済みのメールアドレスです。";
+            }
+
+            return true;
+        }
+
+        /****************************************************************************/
+        /* 処理概要 : ユーザー登録処理
+        /* 作成日：2023/01/04
+        /* 作成者：沖本
+        /****************************************************************************/
+        public function SetUserData($strAccountid)
+        {
+            $strPass = str()->random(8);
+            $encryptedPassword = Hash::make($strPass);
+
+            $user = array(
+                'name' => $_COOKIE["fname"].' '.$_COOKIE["lname"], 
+                'email' => $_COOKIE["email"], 
+                'password' => $encryptedPassword,
+                'accountid' => $strAccountid);
+            // user作成
+            $user = User::create($user);
+
+            return true;
+        }
+
+        /****************************************************************************/
+        /* 処理概要 : Slack通知処理
+        /* 作成日：2022/12/22
+        /* 作成者：沖本
+        /****************************************************************************/
+        public function SendSlack($strMessage)
+        {
+            str_replace('�','', $strMessage);
+            $url = '';
+            $payload = [
+                    'text' => $strMessage,
+            ];
+            $params = [
+                    'headers' => [
+                    'Content-Type' => 'application/json',
+                ],
+                'body' => json_encode($payload),
+            ];
+            $client = new \GuzzleHttp\Client();
+            $res = $client->request('POST', $url, $params);
+    
+            return;
         }
 }
