@@ -72,6 +72,13 @@
   body .user-info__list .flex-box-yuben {
     display: flex;
   }
+  body .user-info .error {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    width: 300px;
+    color: red;
+  }
   body .user-info__flex {
     display: flex;
   }
@@ -97,13 +104,16 @@
     border: none;
     border-radius: 10px;
     margin: auto;
-  }
-  body .user-info__return--link {
-    display: block;
-    width: 128px;
     line-height: 2.5;
     color: #FFF;
-    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+  body .user-info__return:hover {
+    color: #957AFF;
+    background-color: #fff;
+    border: 1px solid #957AFF;
+    transition: 0.5s;
     font-weight: 600;
   }
   body .payinfo {
@@ -219,6 +229,13 @@
     width: 80%;
     color: #2C2C2C;
   }
+  body .user-info .error {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    width: 410px;
+    color: red;
+  }
   body .user-info__flex {
     display: flex;
     width: 271px;
@@ -246,13 +263,16 @@
     background-color: #957AFF;
     border: none;
     border-radius: 10px;
-  }
-  body .user-info__return--link {
-    display: block;
-    width: 128px;
     line-height: 2.5;
     color: #FFF;
-    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+  body .user-info__return:hover {
+    color: #957AFF;
+    background-color: #fff;
+    border: 1px solid #957AFF;
+    transition: 0.5s;
     font-weight: 600;
   }
   body .payinfo {
@@ -367,6 +387,13 @@
   body .user-info__list--data {
     color: #2C2C2C;
   }
+  body .user-info .error {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    width: 680px;
+    color: red;
+  }
   body .user-info__flex {
     display: flex;
     width: 271px;
@@ -394,13 +421,16 @@
     background-color: #957AFF;
     border: none;
     border-radius: 10px;
-  }
-  body .user-info__return--link {
-    display: block;
-    width: 128px;
     line-height: 2.5;
     color: #FFF;
-    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+  body .user-info__return:hover {
+    color: #957AFF;
+    background-color: #fff;
+    border: 1px solid #957AFF;
+    transition: 0.5s;
     font-weight: 600;
   }
   body .payinfo {

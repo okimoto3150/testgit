@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: Helvetica, "Noto Sans JP", "Hiragino Sans", sans-serif !important;
+  font-family: Helvetica, "Noto Sans JP", !important;
   background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)), linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
   background-size: 16px 16px;
   background-repeat: repeat;
@@ -56,16 +56,11 @@ body {
   }
   body .index-img-box .hand-img-box {
     width: 60%;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .hand-img-box img {
     transform: rotate(-20deg);
@@ -76,16 +71,11 @@ body {
     margin-left: auto;
     margin-right: 34%;
     width: 11%;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .fukidashi-img-box img {
     width: 100%;
@@ -95,16 +85,11 @@ body {
     left: 35%;
     z-index: 1;
     width: 50%;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .whoops-img-box img {
     width: 100%;
@@ -114,30 +99,14 @@ body {
     margin-top: -20%;
     margin-left: auto;
     margin-right: 3%;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .ipnohe-img-box img {
     width: 100%;
-  }
-  @-webkit-keyframes index-img-anime {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-    100% {
-      transform: translateY(0);
-    }
   }
   @keyframes index-img-anime {
     0% {
@@ -365,14 +334,6 @@ body {
     color: #2C2C2C;
     transition: 0.5s;
   }
-  body .index-sp-btn .btn-login:hover {
-    background-color: #71CCC7;
-    transition: 0.5s;
-  }
-  body .index-sp-btn .btn-login:hover a {
-    color: #fff;
-    transition: 0.5s;
-  }
   body .index-sp-btn .btn-application {
     width: 100%;
     margin-top: 3%;
@@ -393,14 +354,6 @@ body {
     color: #fff;
     transition: 0.5s;
   }
-  body .index-sp-btn .btn-application:hover {
-    background-color: #fff;
-    transition: 0.5s;
-  }
-  body .index-sp-btn .btn-application:hover a {
-    color: #000;
-    transition: 0.5s;
-  }
   body .index-first-section {
     position: relative;
     margin-left: auto;
@@ -408,7 +361,6 @@ body {
     width: 90%;
   }
   body .index-first-section h2 {
-    padding-top: 52px;
     margin-left: auto;
     margin-right: auto;
     width: 158px;
@@ -1233,16 +1185,11 @@ body {
     position: relative;
     margin-left: -50%;
     width: 110%;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .hand-img-box img {
     width: 100%;
@@ -1252,16 +1199,11 @@ body {
     margin-left: auto;
     margin-right: 35%;
     width: 25%;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .fukidashi-img-box img {
     width: 100%;
@@ -1271,16 +1213,11 @@ body {
     margin-top: -8%;
     margin-left: auto;
     margin-right: 0;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .whoops-img-box img {
     width: 100%;
@@ -1290,30 +1227,14 @@ body {
     margin-top: 8%;
     margin-left: auto;
     margin-right: 3%;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .ipnohe-img-box img {
     width: 100%;
-  }
-  @-webkit-keyframes index-img-anime {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-    100% {
-      transform: translateY(0);
-    }
   }
   @keyframes index-img-anime {
     0% {
@@ -2325,16 +2246,11 @@ body {
     position: relative;
     margin-left: -45%;
     width: 539px;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .hand-img-box img {
     width: 100%;
@@ -2344,16 +2260,11 @@ body {
     margin-left: auto;
     margin-right: 35%;
     width: 127px;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .fukidashi-img-box img {
     width: 100%;
@@ -2363,16 +2274,11 @@ body {
     margin-top: -8%;
     margin-left: auto;
     margin-right: -5%;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 1s;
-            animation-delay: 1s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .whoops-img-box img {
     width: 100%;
@@ -2381,30 +2287,14 @@ body {
     width: 217px;
     margin-left: auto;
     margin-right: 13%;
-    -webkit-animation-name: index-img-anime;
-            animation-name: index-img-anime;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-    -webkit-animation-duration: 3s;
-            animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-name: index-img-anime;
+    animation-delay: 2s;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
   body .index-img-box .ipnohe-img-box img {
     width: 100%;
-  }
-  @-webkit-keyframes index-img-anime {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-    100% {
-      transform: translateY(0);
-    }
   }
   @keyframes index-img-anime {
     0% {

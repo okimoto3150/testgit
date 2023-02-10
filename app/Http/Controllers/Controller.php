@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use Session;
 
 
 class Controller extends BaseController
@@ -79,7 +80,7 @@ class Controller extends BaseController
                     Session::flash('error', "ユーザ情報の作成に失敗しました。サポートまでお問い合わせください。");
                     return back();
                 }
-             }
+            }
 
              return view('checkout');
 	}
@@ -203,7 +204,7 @@ class Controller extends BaseController
 
             if (count($dtUser) > 0)
             {
-                $strErrorMsg = "既に登録済みのメールアドレスです。";
+                $strErrorMsg = "既に登録済みのメールアドレスです。修正するボタンを押して、別のアドレスを入力するか、パスワードが不明な場合はパスワードリセットをご利用ください。";
             }
 
             return true;

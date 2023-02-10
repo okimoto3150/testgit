@@ -14,8 +14,8 @@
     @include('header')
 </header>
     <div class="container checkout">
-    <h2 class="checkout__ttl">新規入会</h2>
-        <h3 class="checkout__ttl02">お申し込み</h3>
+    <h2 class="checkout__ttl">デバイス登録</h2>
+        <h3 class="checkout__ttl02">支払情報</h3>
         <img src="{{asset('/img/Progress-payment.png')}}" class="checkout__img">
         <p class="checkout__text">ご契約内容を送信しました。<br>続けて決済情報のご入力をお願いいたします。</p>
         <!--stripe-->
@@ -26,14 +26,13 @@
             
                 
             <form 
-                role="form" 
-                action="{{ route('stripe.post') }}" 
+                role="form"
+                action="/devicePost" 
                 method="post" 
                 class="require-validation"
                 data-cc-on-file="false"
             data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
-            id="payment-form"
-            onsubmit="submitted=true; this.querySelector('input[type=submit]').disabled=true;">
+            id="payment-form">
             @csrf
 
                 <div class="checkout__cont">
@@ -96,7 +95,7 @@
     
                         <div class="row">
                             <div class="col-xs-12">
-                                <input class="btn btn-primary btn-lg btn-block" id="sub_btn" type="submit" onclick="loding();">
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">送信する</button>
                             </div>
                         </div>
                     
@@ -350,16 +349,6 @@
             }
         }
     });
-    </script>
-    <script>
-        function loding() {
-            
-		    document.getElementById("sub_btn").style.background = "#FFF";
-            document.getElementById("sub_btn").style.color = "#957AFF";
-            document.getElementById("sub_btn").style.border = "1px solid #957AFF";        
-
-
-        }
     </script>
 
     </body>

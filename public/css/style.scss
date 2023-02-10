@@ -3,7 +3,7 @@
 html {scroll-behavior: smooth;}
 
 body {
-    font-family: Helvetica, "Noto Sans JP", "Hiragino Sans", sans-serif !important;
+    font-family: Helvetica, "Noto Sans JP",!important;
 
     //背景を方眼紙風に
     background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
@@ -410,16 +410,6 @@ body {
                     color: #2C2C2C;
                     transition: 0.5s;
                 }
-    
-                &:hover {
-                    background-color: #71CCC7;
-                    transition: 0.5s;
-    
-                    a {
-                        color: #fff;
-                        transition: 0.5s;
-                    }
-                }
             }
     
             .btn-application {
@@ -442,16 +432,6 @@ body {
                     color: #fff;
                     transition: 0.5s;
                 }
-    
-                &:hover {
-                    background-color: #fff;
-                    transition: 0.5s;
-    
-                    a {
-                        color: #000;
-                        transition: 0.5s;
-                    }
-                }
             }
         }
     
@@ -463,7 +443,6 @@ body {
             width: 90%;
     
             h2 {
-                padding-top: 52px;
                 margin-left: auto;
                 margin-right: auto;
                 width: 158px;

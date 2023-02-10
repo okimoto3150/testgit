@@ -59,6 +59,10 @@ Route::get('/device-check', function () {
     return view('device-check');
 });
 
+Route::get('/device-checkout', function () {
+    return view('device-checkout');
+});
+
 Route::get('/device-comp', function () {
     return view('device-comp');
 });
@@ -103,8 +107,13 @@ Route::get('/cancel-comp', function () {
     return view('cancel-comp');
 });
 
+Route::get('/changepayment', function () {
+    return view('changepayment');
+});
+
+
 Route::post('/check', [App\Http\Controllers\Controller::class, 'check'])->name('check');
-Route::get('/checkout', [App\Http\Controllers\Controller::class, 'checkout'])->name('checkout');
+Route::post('/checkout', [App\Http\Controllers\Controller::class, 'checkout'])->name('checkout');
 
 Route::post('/devicecheck', [App\Http\Controllers\HomeController::class, 'devicecheck'])->name('devicecheck');
 Route::post('/contractchangecheck', [App\Http\Controllers\HomeController::class, 'contractchangecheck'])->name('contractchangecheck')->middleware('auth');
@@ -124,6 +133,7 @@ Route::controller(ChargeController::class)->group(function(){
   //  Route::post('ChargeController', 'store')->name('store');
     Route::post('devicePost', 'devicePost')->name('device.post');
     Route::post('chengePost', 'chengePost')->name('chengepost');
+    Route::post('chengePayment', 'chengePayment')->name('chengepayment');
     Route::post('claimPost', 'claimPost')->name('claimpost');
     Route::get('deviceDelete', 'deviceDelete')->name('devicedelete');
     Route::get('AccountCancel', 'AccountCancel')->name('AccountCancel');

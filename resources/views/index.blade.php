@@ -7,6 +7,9 @@
     <meta name="description" content="デバイス保険はスマホ、PC、タブレットに対応。月額500円で「破損」「故障」「水濡れ」「紛失」「盗難」を最大15万円まで補償！WEBから申し込み3分！">
     <title>デバイス保険</title>	
     <link rel="icon" href="{{asset('/img/top/favicon.ico')}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <!-- css読み込み（仮） -->
     <link rel="stylesheet" href="{{asset('/css/style.css')}}">
 </head>
@@ -193,7 +196,7 @@
             <div class="index-third-section">
                 <h2 class="scroll-fade-row"><img src="{{asset('/img/top/H2_3.png')}}" alt="タイトル画像"></h2>
                 <div class="description-img-box scroll-fade-row">
-                    <div class="description-top scroll-fade-row">
+                    <div class="description-top">
                         <div class="description-img">
                             <img src="{{asset('/img/top/Plan_1.png')}}" alt="">
                         </div>
@@ -201,7 +204,7 @@
                             <img src="{{asset('/img/top/Plan_2.png')}}" alt="">
                         </div>
                     </div>
-                    <div class="description-middle scroll-fade-row">
+                    <div class="description-middle">
                         <div class="description-img">
                             <img src="{{asset('/img/top/Plan_3.png')}}" alt="">
                         </div>

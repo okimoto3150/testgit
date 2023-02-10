@@ -90,6 +90,14 @@ body{
                 }
             } 
 
+            .error {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 8px;
+                width: 300px;
+                color: red;
+            }
+
             &__flex{
                 display: flex;
             }
@@ -117,13 +125,16 @@ body{
                 border: none;
                 border-radius: 10px;
                 margin: auto;
-
-                &--link{
-                    display: block;
-                    width: 128px;
-                    line-height: 2.5;
-                    color: #FFF;
-                    text-decoration: none;
+                line-height: 2.5;
+                color: #FFF;
+                font-weight: 600;
+                transition: 0.5s;
+                
+                &:hover {
+                    color: #957AFF;
+                    background-color: #fff;
+                    border: 1px solid #957AFF;
+                    transition: 0.5s;
                     font-weight: 600;
                 }
             }
@@ -264,6 +275,14 @@ body{
                 }
             }
 
+            .error {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 8px;
+                width: 410px;
+                color: red;
+            }
+
             &__flex{
                 display: flex;
                 width: 271px;
@@ -294,13 +313,16 @@ body{
                 background-color: #957AFF;
                 border: none;
                 border-radius: 10px;
+                line-height: 2.5;
+                color: #FFF;
+                font-weight: 600;
+                transition: 0.5s;
 
-                &--link{
-                    display: block;
-                    width: 128px;
-                    line-height: 2.5;
-                    color: #FFF;
-                    text-decoration: none;
+                &:hover {
+                    color: #957AFF;
+                    background-color: #fff;
+                    border: 1px solid #957AFF;
+                    transition: 0.5s;
                     font-weight: 600;
                 }
             }
@@ -442,6 +464,14 @@ body{
                 }
             }
 
+            .error {
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 8px;
+                width: 680px;
+                color: red;
+            }
+
             &__flex{
                 display: flex;
                 width: 271px;
@@ -471,13 +501,16 @@ body{
                 background-color: #957AFF;
                 border: none;
                 border-radius: 10px;
+                line-height: 2.5;
+                color: #FFF;
+                font-weight: 600;
+                transition: 0.5s;
 
-                &--link{
-                    display: block;
-                    width: 128px;
-                    line-height: 2.5;
-                    color: #FFF;
-                    text-decoration: none;
+                &:hover {
+                    color: #957AFF;
+                    background-color: #fff;
+                    border: 1px solid #957AFF;
+                    transition: 0.5s;
                     font-weight: 600;
                 }
             }

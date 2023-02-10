@@ -41,6 +41,15 @@
     margin: auto;
     color: #FFF;
     cursor: pointer;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+  body .privacy__btn:hover {
+    background-color: #FFF;
+    color: #957AFF;
+    border: 1px solid #957AFF;
+    transition: 0.5s;
+    font-weight: 600;
   }
   body .privacy-form {
     margin-top: 40px;
@@ -147,6 +156,15 @@
     margin: auto;
     color: #FFF;
     cursor: pointer;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+  body .privacy__btn:hover {
+    background-color: #FFF;
+    color: #957AFF;
+    border: 1px solid #957AFF;
+    transition: 0.5s;
+    font-weight: 600;
   }
   body .privacy-form {
     margin-top: 40px;
@@ -253,7 +271,16 @@
     border-radius: 10px;
     margin: auto;
     color: #FFF;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.5s;
+  }
+  body .privacy__btn:hover {
+    background-color: #FFF;
+    color: #957AFF;
+    border: 1px solid #957AFF;
+    transition: 0.5s;
+    font-weight: 600;
   }
   body .privacy-form {
     margin-top: 40px;

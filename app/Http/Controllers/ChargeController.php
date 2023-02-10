@@ -113,6 +113,7 @@ class ChargeController extends Controller
         return true;
     }
 
+
     /****************************************************************************/
     /* 処理概要 : STRIPE決済処理
     /* 作成日：2022/12/22
@@ -146,12 +147,14 @@ class ChargeController extends Controller
             env('STRIPE_SECRET')
         );
 
-        $stripe->subscriptions->create([
+        $subscription = $stripe->subscriptions->create([
             'customer' => $array['id'],
             'items' => [
             ['price' => 'price_1Lg1n6EDV4naHKHgxY1sLEa8'],
             ],
         ]);
+
+        $sub_id = $subscription->id;
 
         // Token作成処理
         $strToken = str_replace('%','',urlencode(str()->random(40)));
@@ -161,7 +164,7 @@ class ChargeController extends Controller
             Session::flash('error', "Tokenの作成に失敗しました。サポートまでお問い合わせください。");
             return back();
         }
-
+        
         Mail::send('emails.SendMail', [
             "name" => $_COOKIE["fname"].' '.$_COOKIE["lname"],
             "url" => env('MAIL_RESET_PASS')."/password/reset/".$strToken."?email=".urlencode($_COOKIE["email"])
@@ -184,6 +187,47 @@ class ChargeController extends Controller
     /****************************************************************************/
     public function devicePost(Request $request)
     {
+
+        //STRIPE決済処理
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+
+        try {
+            $customer = Customer::create(array(
+                'name' => $_COOKIE["name"],
+                'email' => $_COOKIE["AccountEmail"],      
+                'address[postal_code]' => $_COOKIE["yuubenbango"],
+                'address[state]' => $_COOKIE["AccountState"],
+                'address[city]' => $_COOKIE["AccountCity"],
+                //'address[line2]' => $_COOKIE["Accountline2"],
+                'phone' => $_COOKIE["AccountPhone"],
+                'source' => $request->stripeToken
+            ));
+        }
+        catch (\Throwable $th) {
+            Session::flash('error', "申込者情報の確認が出来ませんでした。入力画面からやり直してください。");
+            return back();
+        }
+
+        $result = json_encode($customer);
+        $array = json_decode($result , true );
+
+        $stripe = new \Stripe\StripeClient(
+            env('STRIPE_SECRET')
+        );
+
+        $subscription = $stripe->subscriptions->create([
+            'customer' => $array['id'],
+            'items' => [
+            ['price' => 'price_1Lg1n6EDV4naHKHgxY1sLEa8'],
+            ],
+        ]);
+
+        $sub_id = $subscription->id;
+        $cus_id = $array['id'];
+        //$card_id = $array['default_source'];
+
+
+
         Validator::make($request->all(), [
             'device-img1' => 'file|image|max:1024|nullable'
         ])->validate();
@@ -257,8 +301,8 @@ class ChargeController extends Controller
         // OAuth2.0認証処理
         $this->m_strToken = $this->getOAuth();
 
-        // セールスフォースデータ登録処理(個人取引先)
-        $bRet = $this->SetSalesForceInsertDeviceDataTaks();
+        // セールスフォースデータ登録処理(申込内容)
+        $bRet = $this->SetSalesForceInsertDeviceDataTaks($sub_id,$cus_id);
         if ($bRet === false)
         {
             Session::flash('error', "デバイス情報の作成に失敗しました。");
@@ -311,6 +355,34 @@ class ChargeController extends Controller
     }
 
     /****************************************************************************/
+    /* 処理概要 : 支払変更処理
+    /* 作成日：2023/02/10
+    /* 作成者：髙山
+    /****************************************************************************/
+    public function chengePayment(Request $request) {
+
+        Stripe::setApiKey(env('STRIPE_SECRET'));
+        $cus_id = $_COOKIE[ 'customerid' ];
+
+          try {
+            Customer::update(
+                $cus_id,
+              [
+                'source' => $request->stripeToken
+              ]
+            );
+
+          }
+          catch(\Throwable $th) {
+            Session::flash('error', "お支払い方法の変更に失敗しました。");
+            return back();
+          }
+
+          return view("cangepayment-comp");
+        
+    }
+
+    /****************************************************************************/
     /* 処理概要 : デバイス削除処理呼び出し
     /* 作成日：2023/02/06
     /* 作成者：髙山
@@ -319,9 +391,17 @@ class ChargeController extends Controller
 
         // OAuth2.0認証処理
         $this->m_strToken = $this->getOAuth();
+        
+        // 決済情報削除処理
+        $bRet =$this->DeleteStripe($_COOKIE[ 'stripeid' ]);
 
+        if ($bRet === false)
+        {
+            Session::flash('false', "決済情報の削除に失敗しました。");
+            return back();
+        }
 
-        //保険金請求済みなら削除処理を行う
+        // 保険金請求済みなら削除処理を行う
         if (!empty($_COOKIE[ 'Hokenkinid' ])) {
             // セールスフォースデータ削除処理(保険金請求)
             $bRet = $this->SetSalesForceDeleteHokenkinDataTaks($_COOKIE[ 'Hokenkinid' ]);
@@ -352,8 +432,33 @@ class ChargeController extends Controller
         // OAuth2.0認証処理
         $this->m_strToken = $this->getOAuth();
 
+        //決済情報削除処理
+        $res = $this->SelectStripeId();
+
+        if ($res === false) {
+            Session::flash('false', "stripeデータの取得に失敗しました。");
+            return back();
+        }
+
+        $stripe_id = $res[0]->stripe_id;
+
+        try {
+            Stripe::setApiKey(env('STRIPE_SECRET'));
+
+            $subscription = \Stripe\Subscription::retrieve($stripe_id);
+            $subscription->cancel();
+            }
+            
+        catch (\Throwable $th) {
+            // エラー
+            $this->SendSlack($th->getMessage());
+            return false;
+        }  
+
+
         //デバイス情報の登録があれば削除処理を行う
         if (!empty($_COOKIE[ 'deviceId' ])) {
+
 
             //保険金請求の登録があれば削除処理を行う
             if (!empty($_COOKIE[ 'HokenkinId' ])) {
@@ -389,6 +494,24 @@ class ChargeController extends Controller
                 if ($bRet === false)
                 {
                     Session::flash('false', "デバイスデータの削除に失敗しました。");
+                    return back();
+                }
+            }
+
+            //決済情報削除処理
+            $stripeIdArry = $_COOKIE[ 'stripeId' ];
+            $length = count($stripeIdArry);
+
+            for ($i = 0; $i < $length; $i++) {
+
+                $stripeId = $stripeIdArry[$i];
+
+                // セールスフォース登録デバイス削除処理
+                $bRet = $this->DeleteStripe($stripeId);
+
+                if ($bRet === false)
+                {
+                    Session::flash('false', "決済情報の削除に失敗しました。");
                     return back();
                 }
             }
@@ -459,8 +582,7 @@ class ChargeController extends Controller
     public function SendSlack($strMessage)
     {
         str_replace('�','', $strMessage);
-        $url = 'xoxb-470358952384-4697209244148-ZPihJLI3wUYbFhdh6Bc4uLns
-        ';
+        $url = 'https://hooks.slack.com/services/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';
         $payload = [
                 'text' => $strMessage,
         ];
@@ -477,11 +599,75 @@ class ChargeController extends Controller
     }
 
     /****************************************************************************/
+    /* 処理概要 : セールスフォースデータ登録処理(個人取引先)
+    /* 作成日：2022/12/22
+    /* 作成者：沖本
+    /****************************************************************************/
+    public function SetSalesForceInsertDataAccount(&$list,$strAgency)
+    {
+        $path = '/services/data/v55.0/composite/tree/Account/';
+        $url = 'https://onenet3.my.salesforce.com' . $path;
+        $token = $this->m_strToken;
+        
+        $arrData = array();
+        $nCnt = 1;
+
+        $Data = [
+            'attributes' => array('type'=>'Account', 'referenceId' => "ref".$nCnt),
+            'RecordTypeId'  => '0125h000000UUCBAA4',
+            'PersonEmail'=> $_COOKIE["email"],
+            'Phone'=> $_COOKIE["phone"],
+            'LastName'=> $_COOKIE["fname"].' '.$_COOKIE["lname"],
+            'Kokyakuseikanji__pc' => $_COOKIE["fname"],
+            'Kokyakumeikanji__pc' => $_COOKIE["lname"],
+            'Kokyakuseikana__pc' => $_COOKIE["fnamekana"],
+            'Kokyakumeikana__pc' => $_COOKIE["lnamekana"],
+            'Moushikomishaseinengappi__pc' => $_COOKIE["birthday"],
+            'state__c' => $_COOKIE["state"],
+            'city__c' => $_COOKIE["city"],
+            'Yuubenbango__pc' => $_COOKIE["zip_code"],
+            'line2__c' => $_COOKIE["line2"],
+            'UserAgent__c' => $_SERVER["HTTP_USER_AGENT"],
+            'Host__c' => gethostbyaddr($_SERVER['REMOTE_ADDR']),
+            'OwnerId' => $strAgency,
+            'CreatedById'  => $strAgency,
+            'LastModifiedById' => $strAgency,
+        ];
+        
+        array_push($arrData,$Data);
+
+        $postdata = [
+            'records' => $arrData,
+        ];
+
+        $params = [
+            'headers' => [
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Bearer '.$token,
+            ],
+            'body' => json_encode($postdata),
+        ];
+
+        $client = new \GuzzleHttp\Client();
+        try {
+            $res = $client->request('POST', $url, $params);
+        }
+        catch (\Throwable $th) {
+            // エラー
+            $this->SendSlack("個人取引先の作成に失敗しました。");
+            return false;
+        }
+        $list = json_decode($res->getBody()->getContents(), true);
+
+        return true;
+    }
+
+    /****************************************************************************/
     /* 処理概要 : セールスフォースデータ登録処理(デバイス情報)
     /* 作成日：2023/1/17
     /* 作成者：髙山
     /****************************************************************************/
-    public function SetSalesForceInsertDeviceDataTaks()
+    public function SetSalesForceInsertDeviceDataTaks($sub_id,$cus_id)
     {
         $path = '/services/data/v55.0/composite/tree/Taks__c/';
         $url = 'https://onenet3.my.salesforce.com' . $path;
@@ -502,6 +688,8 @@ class ChargeController extends Controller
             'Purchase__c' => $_COOKIE["purchase"],
             'Amount__c' => $_COOKIE["amount"],
             'Career__c' => $_COOKIE["career"],
+            'STRIPE_ID__c' => $sub_id,
+            'STRIPE_CUS_ID__c' => $cus_id,
             'Name' => "デバイス保険",
             'OwnerId' => '0055h000006j5uBAAQ',
             'CreatedById'  => '0055h000006j5uBAAQ',
@@ -540,7 +728,6 @@ class ChargeController extends Controller
 
         return true;
     }
-
 
     /****************************************************************************/
     /* 処理概要 : セールスフォースデータ登録処理(保険金請求)
@@ -616,7 +803,34 @@ class ChargeController extends Controller
         return true;
     }
 
-    
+    /****************************************************************************/
+    /* 処理概要 : ユーザー重複チェック処理
+    /* 作成日：2023/01/04
+    /* 作成者：沖本
+    /****************************************************************************/
+    public function GetUserData(&$dtUser,&$strErrorMsg)
+    {
+        $strSql = "SELECT * FROM users WHERE email = '".$_COOKIE["email"]."'" ;
+
+        try {
+            // SQL実行
+            $dtUser = DB::connection("pgsql")->select($strSql);
+        }
+        catch (\Throwable $th) {
+            // エラー
+            $this->SendSlack($th->getMessage(),false);
+            Log::error($strSql);
+            return false;
+        }
+
+        if (count($dtUser) > 0)
+        {
+            $strErrorMsg = "既に登録済みのメールアドレスです。";
+        }
+
+        return true;
+    }
+
     /****************************************************************************/
     /* 処理概要 : Token登録処理
     /* 作成日：2023/01/06
@@ -800,5 +1014,52 @@ class ChargeController extends Controller
         }
 
         return true;
+    }
+
+    /****************************************************************************/
+    /* 処理概要 : データベースstripe_id取得処理
+    /* 作成日：2023/02/09
+    /* 作成者：髙山
+    /****************************************************************************/
+    public function SelectStripeId() {
+
+        $strSql = "SELECT stripe_id FROM users WHERE accountid = '".$_COOKIE["Accountid"]."'";
+
+        try {
+            // SQL実行
+            $res = DB::connection("pgsql")->select($strSql);
+        }
+        catch (\Throwable $th) {
+            // エラー
+            $this->SendSlack($th->getMessage(),false);
+            Log::error($strSql);
+            return false;
+        }
+
+        return $res;
+    }
+
+    /****************************************************************************/
+    /* 処理概要 : 決済情報削除処理
+    /* 作成日：2023/02/09
+    /* 作成者：髙山
+    /****************************************************************************/
+    public function DeleteStripe($stripe_id) {
+
+        try {
+            Stripe::setApiKey(env('STRIPE_SECRET'));
+
+            $subscription = \Stripe\Subscription::retrieve($stripe_id);
+            $subscription->cancel();
+            }
+            
+        catch (\Throwable $th) {
+            // エラー
+            $this->SendSlack($th->getMessage());
+            return false;
+        }  
+
+        return true;
+
     }
 }

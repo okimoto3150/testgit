@@ -63,7 +63,7 @@
                         </section>
                         <div class="change-btng">
                             <button class="change-btng__user"><a href="/contractchange" class="change-btng__user--link">ご契約者情報の変更</a></button>
-                            <button class="change-btng__payment"><a href="" class="change-btng__payment--link">お支払情報の変更</a></button>
+                            <!--<button class="change-btng__payment"><a href="" class="change-btng__payment--link">お支払情報の変更</a></button>-->
                         </div>
                         <!-- 対象デバイス　-->
                         <div class="contract" id="contract">
@@ -91,6 +91,8 @@
     
                                     for ($k = 0; $k < $length; $k++) {
                                         setcookie("deviceId[$k]", "", time()-60);
+                                        setcookie("stripeId[$k]", "", time()-60);
+                                        setcookie("customerId[$k]", "", time()-60);
                                     }
     
                                 }
@@ -122,8 +124,12 @@
                                     $number = $Customer["number".$i];
                                     $imei = $Customer["imei".$i];
                                     $amount = $Customer["amount".$i];
+                                    $stripeId = $Customer["stripeId".$i];
+                                    $customerId = $Customer["cusId".$i];
 
                                     setcookie("deviceId[$j]", $id, $kigen);
+                                    setcookie("stripeId[$j]", $stripeId, $kigen);
+                                    setcookie("customerId[$j]", $customerId, $kigen);
 
 
                                     //保険金請求状況紐付け処理
@@ -243,8 +249,8 @@
                                         <?php if (empty($HokenkinId)) { ?>
                                             <button class="link-btng__claim"><a href="" class="link-btng__claim--link claim-btn" data-target="<?php echo $id;?>">保険金請求</a></button>
                                         <?php } ?>
-                                            <button class="link-btng__terms"><a href="" class="link-btng__terms--link">お支払情報の変更</a></button>
-                                            <button class="link-btng__delete"><a href="" class="md-btn" data-target="modal<?php echo $i;?>,<?php echo $id;?>,<?php echo $HokenkinId;?>">⊖ デバイスの削除</a></button>
+                                            <button class="link-btng__terms"><a href="" class="link-btng__terms--link terms-btn" data-target="<?php echo $customerId;?>,<?php echo $id;?>">お支払情報の変更</a></button>
+                                            <button class="link-btng__delete"><a href="" class="md-btn" data-target="modal<?php echo $i;?>,<?php echo $id;?>,<?php echo $HokenkinId;?>,<?php echo $stripeId;?>">⊖ デバイスの削除</a></button>
                                                 <div id="modal<?php echo $i;?>" class="modal">
                                                     <div class="md-overlay md-close"></div>
                                                     <div class="modal-body">
@@ -290,7 +296,7 @@
                         </script>
                         <script>
                             $(function(){
-                                
+                                //保険金請求ボタン押下時idをcookieに保存
                                 $(".claim-btn").each(function(){
                                     $(this).on('click',function(e){
                                     e.preventDefault();
@@ -298,6 +304,25 @@
                                     var target = $(this).data('target');
                                     document.cookie = "Taksid=" + target;
                                     window.location.href = '/claim';
+
+                                    });
+                                });
+                            });
+                        </script>
+                        <script>
+                            $(function(){
+                                //お支払い変更ボタン押下時idをcookieに保存
+                                $(".terms-btn").each(function(){
+                                    $(this).on('click',function(e){
+                                    e.preventDefault();
+
+                                    var target = $(this).data('target');
+                                    const itemData = target.split(',');
+                                    var customerid = itemData[0];
+                                    var Taksid = itemData[1];
+                                    document.cookie = "customerid=" + customerid;
+                                    document.cookie = "Taksid=" + Taksid;
+                                    window.location.href = '/changepayment';
 
                                     });
                                 });
@@ -319,7 +344,9 @@
                                     var modalid = itemData[0];
                                     var Taksid = itemData[1];
                                     var HokenkinId = itemData[2];
+                                    var stripeId = itemData[3];
                                     document.cookie = "Taksid=" + Taksid;
+                                    document.cookie = "stripeid=" + stripeId;
 
                                     if (HokenkinId) {
                                         document.cookie = "Hokenkinid=" + HokenkinId;

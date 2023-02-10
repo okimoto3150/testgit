@@ -1,41 +1,4 @@
 @media only screen and (max-width: 600px) {
-  body {
-    /*.btn-group{
-        text-align: center;
-        &__next{
-            display: block;
-            margin: auto;
-            margin-bottom: 16px;
-            width: 240px;
-            height: 48px;
-            background-color: #957AFF;
-            border: none;
-            border-radius: 24px;
-
-            &--link{
-                color: #FFF;
-                text-decoration: none;
-                font-weight: 600;
-            }
-        }
-
-        &__later{
-            display: block;
-            margin: auto;
-            width: 160px;
-            height: 48px;
-            background-color: #ffffff;
-            border: solid 1px #957AFF;
-            border-radius: 24px;
-
-            &--link{
-                color: #957AFF;
-                text-decoration: none;
-                font-weight: 600;
-            }
-        }
-    }*/
-  }
   body .complet {
     width: 312px;
     margin: 0 auto;
@@ -46,7 +9,7 @@
     font-size: 28px;
     font-weight: 600;
     margin-top: 24px;
-    color: #2C2C2C;
+    color: #957AFF;
   }
   body .complet__ttl02 {
     font-size: 22px;
@@ -71,45 +34,30 @@
     margin-bottom: 40px;
     color: #2C2C2C;
   }
+  body .complet .__bun-box {
+    width: 156px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .complet__btn {
+    width: 156px;
+    height: 48px;
+    background: #957AFF;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin: auto;
+  }
+  body .complet__btn--link {
+    display: block;
+    width: 156px;
+    line-height: 2.6;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+  }
 }
 @media only screen and (min-width: 601px) and (max-width: 1099px) {
-  body {
-    /*.btn-group{
-        text-align: center;
-        &__next{
-            display: block;
-            margin: auto;
-            margin-bottom: 16px;
-            width: 240px;
-            height: 48px;
-            background-color: #957AFF;
-            border: none;
-            border-radius: 24px;
-
-            &--link{
-                color: #FFF;
-                text-decoration: none;
-                font-weight: 600;
-            }
-        }
-
-        &__later{
-            display: block;
-            margin: auto;
-            width: 160px;
-            height: 48px;
-            background-color: #ffffff;
-            border: solid 1px #957AFF;
-            border-radius: 24px;
-
-            &--link{
-                color: #957AFF;
-                text-decoration: none;
-                font-weight: 600;
-            }
-        }
-    }*/
-  }
   body .complet {
     width: 70%;
     margin: 0 auto;
@@ -120,7 +68,7 @@
     font-size: 28px;
     font-weight: 600;
     margin-top: 24px;
-    color: #2C2C2C;
+    color: #957AFF;
   }
   body .complet__ttl02 {
     font-size: 22px;
@@ -140,50 +88,35 @@
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    margin-top: 90px;
+    margin-top: 50px;
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     color: #2C2C2C;
+  }
+  body .complet .__bun-box {
+    width: 156px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .complet__btn {
+    width: 156px;
+    height: 48px;
+    background: #957AFF;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin: auto;
+  }
+  body .complet__btn--link {
+    display: block;
+    width: 156px;
+    line-height: 2.6;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
   }
 }
 @media screen and (min-width: 1100px) {
-  body {
-    /*.btn-group{
-        text-align: center;
-        &__next{
-            display: block;
-            margin: auto;
-            margin-bottom: 16px;
-            width: 240px;
-            height: 48px;
-            background-color: #957AFF;
-            border: none;
-            border-radius: 24px;
-
-            &--link{
-                color: #FFF;
-                text-decoration: none;
-                font-weight: 600;
-            }
-        }
-
-        &__later{
-            display: block;
-            margin: auto;
-            width: 160px;
-            height: 48px;
-            background-color: #ffffff;
-            border: solid 1px #957AFF;
-            border-radius: 24px;
-
-            &--link{
-                color: #957AFF;
-                text-decoration: none;
-                font-weight: 600;
-            }
-        }
-    }*/
-  }
   body .complet {
     width: 70%;
     margin: 0 auto;
@@ -194,7 +127,7 @@
     font-size: 28px;
     font-weight: 600;
     margin-top: 24px;
-    color: #2C2C2C;
+    color: #957AFF;
   }
   body .complet__ttl02 {
     font-size: 22px;
@@ -214,9 +147,31 @@
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    margin-top: 110px;
+    margin-top: 80px;
     font-size: 14px;
-    margin-bottom: 40px;
+    margin-bottom: 90px;
     color: #2C2C2C;
+  }
+  body .complet .__bun-box {
+    width: 156px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .complet__btn {
+    width: 156px;
+    height: 48px;
+    background: #957AFF;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    margin: auto;
+  }
+  body .complet__btn--link {
+    display: block;
+    width: 156px;
+    line-height: 2.6;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
   }
 }/*# sourceMappingURL=comp.css.map */

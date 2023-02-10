@@ -73,9 +73,18 @@
                             <p class="user-info__list--data" id="user_add"></p>
                         </div>
                     </dl>
+                    @if (Session::has('error'))
+                    <div class="alert alert-error text-center">
+                        <p class="error">{{ Session::get('error') }}</p>
+                    </div>
+                    @endif
                     <div class="user-info__flex">
                         <button class="user-info__btn" onclick="history.go(-1);">修正する</button>
-                        <button class="user-info__return"><a href="{{url('/checkout')}}" class="user-info__return--link">送信する</a></button>
+                        <!--<button class="user-info__return" id="btn"><a href="{{url('/checkout')}}" class="user-info__return--link" onclick="loding();">送信する</a></button>-->
+                        <form action="/checkout" method="post" onsubmit="submitted=true; this.querySelector('input[type=submit]').disabled=true;">
+                            @csrf
+                            <input class="user-info__return" id="sub_btn"  onclick="loding();" type="submit" value="送信する">
+                        </form>
                     </div>
                     
                 </section>
@@ -110,6 +119,13 @@
             //address.textContent = cookieArray["state"] + cookieArray["city"] + cookieArray["line1"] + cookieArray["line2"];
             address.textContent = cookieArray["state"] + cookieArray["city"] + cookieArray["line2"];
 
+        </script>
+        <script>
+            function loding() {
+                document.getElementById("sub_btn").style.background = "#FFF";
+                document.getElementById("sub_btn").style.color = "#957AFF";
+                document.getElementById("sub_btn").style.border = "1px solid #957AFF";
+            }
         </script>
 
         <!--<script src="{{ asset('/js/cookie_output.js') }}"></script>-->

@@ -98,12 +98,16 @@
                         </div>
                     </dl>
                         <!--<button class="check-table__block--next"><a href="{{ route('device.post') }}">送信する</a></button>-->
-                        <div class="check-table__block">
+                        <!--<div class="check-table__block">
                         <button class="check-table__block--return" onclick="history.go(-1);">修正する</button>
                             <form action="/devicePost" method="post" enctype="multipart/form-data">
                         @csrf
                                 <input class="check-table__block--next" type="submit" value="送信する">
                             </form>
+                    </div>-->
+                    <div class="check-table__block">
+                        <button class="check-table__block--return" onclick="history.go(-1);">修正する</button>
+                        <button class="check-table__block--next"><a href="{{url('/device-checkout')}}" class="next-link">送信する</a></button>
                     </div>
                 </section>
             </div>

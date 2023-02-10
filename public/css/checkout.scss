@@ -498,6 +498,16 @@ body{
             color: #FFF;
             font-weight: 600;
             cursor: pointer;
+            transition: 0.5s;
+
+
+            &:hover {
+                background-color: #FFF;
+                color: #957AFF;
+                border: 1px solid #957AFF;
+                transition: 0.5s;
+            }
+
         }
 
     }

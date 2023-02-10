@@ -45,8 +45,7 @@ body {
     font-size: 14px;
     line-height: 160%;
     /* または22px */
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
     /* Text/Black */
     color: #101319;
     margin-top: 8px;
@@ -137,8 +136,7 @@ body {
     font-size: 14px;
     line-height: 160%;
     /* または22px */
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
     /* Text/Black */
     color: #101319;
     margin-top: 8px;
@@ -231,8 +229,7 @@ body {
     font-size: 14px;
     line-height: 160%;
     /* または22px */
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
     /* Text/Black */
     color: #101319;
     margin-top: 8px;

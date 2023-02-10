@@ -245,6 +245,12 @@
     border: none;
     color: #FFFFFF;
   }
+  body .check-table__block--next a {
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 600;
+  }
   body .device-comp {
     width: 312px;
     margin: 0 auto;
@@ -563,6 +569,12 @@
     border: none;
     color: #FFFFFF;
   }
+  body .check-table__block--next a {
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 600;
+  }
   body .device-comp {
     width: 70%;
     margin: 0 auto;
@@ -874,7 +886,12 @@
     background: #957AFF;
     border-radius: 10px;
     border: none;
+  }
+  body .check-table__block--next a {
+    display: block;
+    text-decoration: none;
     color: #FFFFFF;
+    font-weight: 600;
   }
   body .device-comp {
     width: 70%;

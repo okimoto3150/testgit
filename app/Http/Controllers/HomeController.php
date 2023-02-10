@@ -94,6 +94,8 @@ class HomeController extends Controller
             $Customer["purchase".$nTaksCnt] =  $value["Purchase__c"];
             $Customer["amount".$nTaksCnt] =  $value["Amount__c"];
             $Customer["career".$nTaksCnt] =  $value["Career__c"];
+            $Customer["stripeId".$nTaksCnt] =  $value["STRIPE_ID__c"];
+            $Customer["cusId".$nTaksCnt] =  $value["STRIPE_CUS_ID__c"];
 
             $nTaksCnt++;
         }
