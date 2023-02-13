@@ -221,7 +221,7 @@
             document.cookie = 'line2=' + document.forms[0].elements[12].value;
         }
     </script>
-     <script src="{{ asset('/js/validation.js') }}"></script>
+    <script src="{{ asset('/js/validation.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/fetch-jsonp@1.1.3/build/fetch-jsonp.min.js"></script>
     <script src="{{ asset('/js/zipcloud.js') }}"></script>
 </body>
