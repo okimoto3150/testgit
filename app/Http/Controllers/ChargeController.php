@@ -821,30 +821,6 @@ class ChargeController extends Controller
     }
 
     /****************************************************************************/
-    /* 処理概要 : Token登録処理
-    /* 作成日：2023/01/06
-    /* 作成者：沖本
-    /****************************************************************************/
-    public function SetToken($strToken)
-    {
-        $strSql = "INSERT INTO password_resets VALUES('".$_COOKIE["email"]."','".Hash::make($strToken)."','".date('Y-m-d H:i:s')."') ";
-        $strSql .= "on conflict (email) do update set token='".Hash::make($strToken)."',created_at='".date('Y-m-d H:i:s')."'";
-
-        try {
-            // SQL実行
-            $dtUser = DB::connection("pgsql")->insert($strSql);
-        }
-        catch (\Throwable $th) {
-            // エラー
-            $this->SendSlack($th->getMessage(),false);
-            Log::error($strSql);
-            return false;
-        }
-
-        return true;
-    }
-
-    /****************************************************************************/
     /* 処理概要 : セールスフォースデータ変更処理(個人取引先)
     /* 作成日：2023/02/03
     /* 作成者：髙山
