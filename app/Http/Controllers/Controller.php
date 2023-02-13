@@ -80,9 +80,19 @@ class Controller extends BaseController
                     Session::flash('error', "ユーザ情報の作成に失敗しました。サポートまでお問い合わせください。");
                     return back();
                 }
+
+                // Token作成処理
+                $strToken = str_replace('%','',urlencode(str()->random(40)));
+                $bRet = $this->SetToken($strToken);
+                if ($bRet === false)
+                {
+                    Session::flash('error', "Tokenの作成に失敗しました。サポートまでお問い合わせください。");
+                    return back();
+                }
+                setcookie("Token",$strToken);
             }
 
-             return view('checkout');
+            return view('checkout');
 	}
 
         /****************************************************************************/

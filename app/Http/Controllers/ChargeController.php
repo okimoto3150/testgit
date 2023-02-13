@@ -153,21 +153,10 @@ class ChargeController extends Controller
             ['price' => 'price_1Lg1n6EDV4naHKHgxY1sLEa8'],
             ],
         ]);
-
-        $sub_id = $subscription->id;
-
-        // Token作成処理
-        $strToken = str_replace('%','',urlencode(str()->random(40)));
-        $bRet = $this->SetToken($strToken);
-        if ($bRet === false)
-        {
-            Session::flash('error', "Tokenの作成に失敗しました。サポートまでお問い合わせください。");
-            return back();
-        }
         
         Mail::send('emails.SendMail', [
             "name" => $_COOKIE["fname"].' '.$_COOKIE["lname"],
-            "url" => env('MAIL_RESET_PASS')."/password/reset/".$strToken."?email=".urlencode($_COOKIE["email"])
+            "url" => env('MAIL_RESET_PASS')."/password/reset/".$_COOKIE["Token"]."?email=".urlencode($_COOKIE["email"])
         ], function($message) {
             $message
                 ->to($_COOKIE["email"])
