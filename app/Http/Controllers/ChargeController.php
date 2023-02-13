@@ -140,19 +140,19 @@ class ChargeController extends Controller
             return back();
         }
 
-        $result = json_encode($customer);
-        $array = json_decode($result , true );
+        //$result = json_encode($customer);
+        //$array = json_decode($result , true );
 
-        $stripe = new \Stripe\StripeClient(
-            env('STRIPE_SECRET')
-        );
+       //$stripe = new \Stripe\StripeClient(
+       //    env('STRIPE_SECRET')
+       //);
 
-        $subscription = $stripe->subscriptions->create([
-            'customer' => $array['id'],
-            'items' => [
-            ['price' => 'price_1Lg1n6EDV4naHKHgxY1sLEa8'],
-            ],
-        ]);
+       //$subscription = $stripe->subscriptions->create([
+       //    'customer' => $array['id'],
+       //    'items' => [
+       //    ['price' => 'price_1Lg1n6EDV4naHKHgxY1sLEa8'],
+       //    ],
+       //]);
         
         Mail::send('emails.SendMail', [
             "name" => $_COOKIE["fname"].' '.$_COOKIE["lname"],
