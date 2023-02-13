@@ -73,14 +73,6 @@ class Controller extends BaseController
                 $arr = $res["results"];
                 setcookie("Accountid",$arr[0]["id"]);
 
-                // ユーザー登録処理
-                $bRet = $this->SetUserData($arr[0]["id"]);
-                if ($bRet === false)
-                {
-                    Session::flash('error', "ユーザ情報の作成に失敗しました。サポートまでお問い合わせください。");
-                    return back();
-                }
-
                 // Token作成処理
                 $strToken = str_replace('%','',urlencode(str()->random(40)));
                 $bRet = $this->SetToken($strToken);
@@ -221,27 +213,6 @@ class Controller extends BaseController
         }
 
         /****************************************************************************/
-        /* 処理概要 : ユーザー登録処理
-        /* 作成日：2023/01/04
-        /* 作成者：沖本
-        /****************************************************************************/
-        public function SetUserData($strAccountid)
-        {
-            $strPass = str()->random(8);
-            $encryptedPassword = Hash::make($strPass);
-
-            $user = array(
-                'name' => $_COOKIE["fname"].' '.$_COOKIE["lname"], 
-                'email' => $_COOKIE["email"], 
-                'password' => $encryptedPassword,
-                'accountid' => $strAccountid);
-            // user作成
-            $user = User::create($user);
-
-            return true;
-        }
-
-        /****************************************************************************/
         /* 処理概要 : Slack通知処理
         /* 作成日：2022/12/22
         /* 作成者：沖本
@@ -264,7 +235,6 @@ class Controller extends BaseController
     
             return;
         }
-
 
     /****************************************************************************/
     /* 処理概要 : Token登録処理

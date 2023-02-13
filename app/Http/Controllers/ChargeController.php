@@ -140,20 +140,29 @@ class ChargeController extends Controller
             return back();
         }
 
-        //$result = json_encode($customer);
-        //$array = json_decode($result , true );
+        $result = json_encode($customer);
+        $array = json_decode($result , true );
 
-       //$stripe = new \Stripe\StripeClient(
-       //    env('STRIPE_SECRET')
-       //);
+        //$stripe = new \Stripe\StripeClient(
+        //    env('STRIPE_SECRET')
+        //);
 
-       //$subscription = $stripe->subscriptions->create([
-       //    'customer' => $array['id'],
-       //    'items' => [
-       //    ['price' => 'price_1Lg1n6EDV4naHKHgxY1sLEa8'],
-       //    ],
-       //]);
+        //$subscription = $stripe->subscriptions->create([
+        //    'customer' => 'cus_N6zHYy7tvVHgQX',
+        //    'items' => [
+        //    ['price' => 'price_1Lg1n6EDV4naHKHgxY1sLEa8'],
+        //    ],
+        //]);
+
         
+        // ユーザー登録処理
+        $bRet = $this->SetUserData($_COOKIE["Accountid"],$array[0]["id"]);
+        if ($bRet === false)
+        {
+            Session::flash('error', "ユーザ情報の作成に失敗しました。サポートまでお問い合わせください。");
+            return back();
+        }
+
         Mail::send('emails.SendMail', [
             "name" => $_COOKIE["fname"].' '.$_COOKIE["lname"],
             "url" => env('MAIL_RESET_PASS')."/password/reset/".$_COOKIE["Token"]."?email=".urlencode($_COOKIE["email"])
@@ -1026,5 +1035,27 @@ class ChargeController extends Controller
 
         return true;
 
+    }
+
+    /****************************************************************************/
+    /* 処理概要 : ユーザー登録処理
+    /* 作成日：2023/01/04
+    /* 作成者：沖本
+    /****************************************************************************/
+    public function SetUserData($strAccountid,$strStripeid)
+    {
+        $strPass = str()->random(8);
+        $encryptedPassword = Hash::make($strPass);
+
+        $user = array(
+            'name' => $_COOKIE["fname"].' '.$_COOKIE["lname"], 
+            'email' => $_COOKIE["email"], 
+            'password' => $encryptedPassword,
+            'accountid' => $strAccountid,
+            'stripe_id' => $strStripeid);
+        // user作成
+        $user = User::create($user);
+
+        return true;
     }
 }
