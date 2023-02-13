@@ -156,7 +156,7 @@ class ChargeController extends Controller
 
         
         // ユーザー登録処理
-        $bRet = $this->SetUserData($_COOKIE["Accountid"],$array[0]["id"]);
+        $bRet = $this->SetUserData($_COOKIE["Accountid"],$array["id"]);
         if ($bRet === false)
         {
             Session::flash('error', "ユーザ情報の作成に失敗しました。サポートまでお問い合わせください。");
