@@ -191,7 +191,7 @@ class Controller extends BaseController
         /****************************************************************************/
         public function GetUserData(&$dtUser,&$strErrorMsg)
         {
-            $strSql = "SELECT * FROM users WHERE email = '".$_COOKIE["email"]."'" ;
+            $strSql = "SELECT * FROM users WHERE email = '".$_SESSION["email"]."'" ;
 
             try {
                 // SQL実行
