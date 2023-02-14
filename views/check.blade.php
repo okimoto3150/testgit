@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>デバイス保険</title>
+        <link rel="icon" href="{{asset('/img/top/favicon.ico')}}" />
+        <link rel="stylesheet" href="{{asset('css/check.css')}}">
+    </head>
+    <body>
+        <header>
+            @include('header')
+        </header>
+        <main>
+            <div class="check">
+                <h2 class="check__ttl">新規入会</h2>
+                <h3 class="check__ttl02">お申し込み</h3>
+                <img src="{{asset('/img/Progress-check.png')}}" class="check__img">
+                <p class="check__text">入力内容に間違いがないか確認し、問題が無ければ送信ボタンを押してください。</p>
+                <section class="plan">
+                    <h3 class="plan__ttl">お申し込み内容確認</h3>
+                    <div class="flex-box">
+                        <div class="plan__group">
+                            <dt class="plan__group--ttl">プラン名</dt>
+                            <dd class="plan__group--data">デバイス保険</dd>
+                        </div>
+                        <div class="plan__group">
+                            <dt class="plan__group--ttl">保険金額</dt>
+                            <dd class="plan__group--data">100,000円</dd>
+                        </div>
+                    </div>
+                    <div class="plan__group">
+                        <dt class="plan__group--ttl">月払保険料</dt>
+                        <dd class="plan__group--data">500円</dd>
+                    </div>
+                </section>
+                <section class="user-info">
+                    <h3 class="user-info__ttl">ご契約情報</h3>
+                    <dl class="user-info__list">
+                        <div class="flex-box">
+                            <div class="user-info__list--group">
+                                <dt class="user-info__list--ttl">氏名</dt>
+                                <p class="user-info__list--data" id="user_name"></p>
+                            </div>
+                            <div class="user-info__list--group">
+                                <dt class="user-info__list--ttl">氏名（フリガナ）</dt>
+                                <p class="user-info__list--data" id="user_kana"></p>
+                            </div>
+                        </div>
+                        <div class="flex-box">
+                            <div class="user-info__list--group">
+                                <dt class="user-info__list--ttl">生年月日</dt>
+                                <p class="user-info__list--data"  id="user_birthday"></p>
+                            </div>
+                            <div class="user-info__list--group">
+                                <dt class="user-info__list--ttl">メールアドレス</dt>
+                                <p class="user-info__list--data" id="user_email"></p>
+                            </div>
+                        </div>
+                        <div class="flex-box">
+                            <div class="user-info__list--group">
+                                <dt class="user-info__list--ttl">電話番号</dt>
+                                <p class="user-info__list--data" id="user_phone"></p>
+                            </div>
+                            <div class="user-info__list--group">
+                                <dt class="user-info__list--ttl">郵便番号</dt>
+                                <div class="flex-box-yuben">
+                                    <span>〒</span><p class="user-info__list--data" id="user_zip_code"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-info__list--group">
+                            <dt class="user-info__list--ttl">住所</dt>
+                            <p class="user-info__list--data" id="user_add"></p>
+                        </div>
+                    </dl>
+                    @if (Session::has('error'))
+                    <div class="alert alert-error text-center">
+                        <p class="error">{{ Session::get('error') }}</p>
+                    </div>
+                    @endif
+                    <div class="user-info__flex">
+                        <button class="user-info__btn" onclick="history.go(-1);">修正する</button>
+                        <!--<button class="user-info__return" id="btn"><a href="{{url('/checkout')}}" class="user-info__return--link" onclick="loding();">送信する</a></button>-->
+                        <form action="/checkout" method="post" onsubmit="submitted=true; this.querySelector('input[type=submit]').disabled=true;">
+                            @csrf
+                            <input class="user-info__return" id="sub_btn"  onclick="loding();" type="submit" value="送信する">
+                        </form>
+                    </div>
+                    
+                </section>
+            </div>
+        </main>
+        <footer>
+            @include('footer')
+        </footer>
+        <script type="text/javascript">
+            const name = document.getElementById('user_name');
+            name.textContent = sessionStorage.getItem('fname') + "　" + sessionStorage.getItem('lname');
+            const kana = document.getElementById('user_kana');
+            kana.textContent = sessionStorage.getItem("fnamekana") + "　" + sessionStorage.getItem("lnamekana");
+            const birthday = document.getElementById('user_birthday');
+            birthday.textContent = sessionStorage.getItem("birthday");
+            const email = document.getElementById('user_email');
+            email.textContent = sessionStorage.getItem("email");
+            const phone = document.getElementById('user_phone');
+            phone.textContent = sessionStorage.getItem("phone");
+            const zip_code = document.getElementById('user_zip_code');
+            zip_code.textContent = sessionStorage.getItem("zip_code");
+            const address = document.getElementById('user_add');
+            address.textContent = sessionStorage.getItem("state") + sessionStorage.getItem("city") + sessionStorage.getItem("line2");
+        </script>
+        <script>
+            function loding() {
+                document.getElementById("sub_btn").style.background = "#FFF";
+                document.getElementById("sub_btn").style.color = "#957AFF";
+                document.getElementById("sub_btn").style.border = "1px solid #957AFF";
+            }
+        </script>
+
+        <!--<script src="{{ asset('/js/cookie_output.js') }}"></script>-->
+    </body>
+</html>
