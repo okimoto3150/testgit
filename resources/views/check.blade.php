@@ -94,30 +94,43 @@
             @include('footer')
         </footer>
         <script type="text/javascript">
-            var cookies = document.cookie;
-            var cookieItem = cookies.split(";");
-            var cookieArray = new Array();
-            for (i = 0; i < cookieItem.length; i++) {
-                cookieItem[i] = cookieItem[i].trim();
-                var elem = cookieItem[i].split("=");
-                cookieArray[elem[0]] = decodeURIComponent(elem[1]);
-            }
-
+            //var cookies = document.cookie;
+            //var cookieItem = cookies.split(";");
+            //var cookieArray = new Array();
+            //for (i = 0; i < cookieItem.length; i++) {
+            //    cookieItem[i] = cookieItem[i].trim();
+            //    var elem = cookieItem[i].split("=");
+            //    cookieArray[elem[0]] = decodeURIComponent(elem[1]);
+            //}
+            //const name = document.getElementById('user_name');
+            //name.textContent = cookieArray["fname"] + "　" + cookieArray["lname"];
+            //const kana = document.getElementById('user_kana');
+            //kana.textContent = cookieArray["fnamekana"] + "　" + cookieArray["lnamekana"];
+            //const birthday = document.getElementById('user_birthday');
+            //birthday.textContent = cookieArray["birthday"];
+            //const email = document.getElementById('user_email');
+            //email.textContent = cookieArray["email"];
+            //const phone = document.getElementById('user_phone');
+            //phone.textContent = cookieArray["phone"];
+            //const zip_code = document.getElementById('user_zip_code');
+            //zip_code.textContent = cookieArray["zip_code"];
+            //const address = document.getElementById('user_add');
+            ////address.textContent = cookieArray["state"] + cookieArray["city"] + cookieArray["line1"] + cookieArray["line2"];
+            //address.textContent = cookieArray["state"] + cookieArray["city"] + cookieArray["line2"];
             const name = document.getElementById('user_name');
-            name.textContent = cookieArray["fname"] + "　" + cookieArray["lname"];
+            name.textContent = sessionStorage.getItem('fname') + "　" + sessionStorage.getItem('lname');
             const kana = document.getElementById('user_kana');
-            kana.textContent = cookieArray["fnamekana"] + "　" + cookieArray["lnamekana"];
+            kana.textContent = sessionStorage.getItem("fnamekana") + "　" + sessionStorage.getItem("lnamekana");
             const birthday = document.getElementById('user_birthday');
-            birthday.textContent = cookieArray["birthday"];
+            birthday.textContent = sessionStorage.getItem("birthday");
             const email = document.getElementById('user_email');
-            email.textContent = cookieArray["email"];
+            email.textContent = sessionStorage.getItem("email");
             const phone = document.getElementById('user_phone');
-            phone.textContent = cookieArray["phone"];
+            phone.textContent = sessionStorage.getItem("phone");
             const zip_code = document.getElementById('user_zip_code');
-            zip_code.textContent = cookieArray["zip_code"];
+            zip_code.textContent = sessionStorage.getItem("zip_code");
             const address = document.getElementById('user_add');
-            //address.textContent = cookieArray["state"] + cookieArray["city"] + cookieArray["line1"] + cookieArray["line2"];
-            address.textContent = cookieArray["state"] + cookieArray["city"] + cookieArray["line2"];
+            address.textContent = sessionStorage.getItem("state") + sessionStorage.getItem("city") + sessionStorage.getItem("line2");
 
         </script>
         <script>
