@@ -121,6 +121,7 @@ class ChargeController extends Controller
     /****************************************************************************/
     public function stripePost(Request $request)
     {
+        session_start();
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
         try {

@@ -26,6 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        session_start();
         $user = \Auth::user();
         $arr = array();
         $arr = json_decode(json_encode($user), true);

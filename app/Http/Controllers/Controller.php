@@ -26,6 +26,7 @@ class Controller extends BaseController
 
         public function checkout(Request $moji)
         {
+            session_start();
             // ユーザー重複チェック処理
             $bRet = $this->GetUserData($dtUser,$strErrorMsg);
             if ($bRet === false)
